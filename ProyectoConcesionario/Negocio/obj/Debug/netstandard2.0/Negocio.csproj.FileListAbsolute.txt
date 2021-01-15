@@ -1,0 +1,8 @@
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Negocio.deps.json
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Negocio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Negocio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.csprojAssemblyReference.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.AssemblyInfo.cs
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.pdb

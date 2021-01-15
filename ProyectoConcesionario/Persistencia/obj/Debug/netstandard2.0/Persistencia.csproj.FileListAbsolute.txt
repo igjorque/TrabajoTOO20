@@ -1,0 +1,8 @@
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\bin\Debug\netstandard2.0\Persistencia.deps.json
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\bin\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\bin\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\obj\Debug\netstandard2.0\Persistencia.csprojAssemblyReference.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\obj\Debug\netstandard2.0\Persistencia.AssemblyInfoInputs.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\obj\Debug\netstandard2.0\Persistencia.AssemblyInfo.cs
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\obj\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Persistencia\obj\Debug\netstandard2.0\Persistencia.pdb

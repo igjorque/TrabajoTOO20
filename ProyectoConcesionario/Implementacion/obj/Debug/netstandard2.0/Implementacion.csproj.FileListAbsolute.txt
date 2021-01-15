@@ -1,0 +1,11 @@
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\bin\Debug\netstandard2.0\Implementacion.deps.json
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\bin\Debug\netstandard2.0\Implementacion.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\bin\Debug\netstandard2.0\Implementacion.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.csprojAssemblyReference.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.AssemblyInfoInputs.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.AssemblyInfo.cs
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.csproj.CopyComplete
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Implementacion\obj\Debug\netstandard2.0\Implementacion.pdb

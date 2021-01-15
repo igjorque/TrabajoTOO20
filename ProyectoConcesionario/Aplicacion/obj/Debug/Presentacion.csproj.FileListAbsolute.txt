@@ -1,0 +1,8 @@
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Aplicacion.exe.config
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Aplicacion.exe
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Aplicacion.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.Properties.Resources.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.exe
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.pdb
