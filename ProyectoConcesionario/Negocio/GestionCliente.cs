@@ -1,6 +1,6 @@
 ﻿using System;
 using Dominio;
-using Implementacion.Cliente;
+using Implementacion;
 using System.Collections.Generic;
 
 namespace Negocio

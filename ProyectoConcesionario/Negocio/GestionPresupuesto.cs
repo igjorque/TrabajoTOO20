@@ -1,10 +1,112 @@
-﻿using System;
+﻿using Dominio;
+using Implementacion;
+using Persistencia;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Negocio
 {
-    class GestionPresupuesto
+    public class GestionPresupuesto
     {
+        public void altaPresupuesto(Presupuesto p)
+        {
+            BD.ColeccionPresupuestos.Add(p);
+        }
+
+        public Cliente clientePresupuesto(PresupuestoDTO1 p)
+        {
+            return BD.ColeccionPresupuestos[p.IdPres].Client;
+        }
+
+        public Estado estadoPresupuesto(PresupuestoDTO1 p)
+        {
+            return BD.ColeccionPresupuestos[p.IdPres].EstadoPr;
+        }
+
+        public Vehiculo presupuestoAceptado_(PresupuestoDTO1 p)
+        {
+            if (estadoPresupuesto(p) == Estado.Aceptado) 
+            { 
+                foreach (LineaPresupuesto lp in BD.ColeccionPresupuestos[p.IdPres].Lineas)
+                {
+                    if(lp.EstadoLinea == Estado.Aceptado)
+                    {
+                        return lp.VehiculoPr;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public Presupuesto consultarPresupuesto(PresupuestoDTO1 p)
+        {
+            return BD.ColeccionPresupuestos[p.IdPres];
+        }
+
+        public List<Presupuesto> presupuestosCliente(ClienteDTO1 c)
+        {
+            List<Presupuesto> lista = new List<Presupuesto>();
+            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            {
+                if(p.Client.Dni == c.Dni)
+                {
+                    lista.Add(p);
+                }
+            }
+            return lista;
+        }
+
+        public List<Presupuesto> presupuestosComercial(ComercialDTO1 c)
+        {
+            List<Presupuesto> lista = new List<Presupuesto>();
+            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            {
+                if (p.Comerc.Dni == c.IdComercial)
+                {
+                    lista.Add(p);
+                }
+            }
+            return lista;
+        }
+
+        public List<Presupuesto> presupuestosVehiculo(VehiculoDTO1 v)
+        {
+            List<Presupuesto> lista = new List<Presupuesto>();
+            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            {
+                foreach(LineaPresupuesto lp in p.Lineas)
+                {
+                    if(lp.VehiculoPr.Bastidor == v.Bastidor)
+                    {
+                        lista.Add(p);
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public List<Presupuesto> presupuestosEstado(Estado e)
+        {
+            List<Presupuesto> lista = new List<Presupuesto>();
+            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            {
+                if (p.EstadoPr == e)
+                {
+                    lista.Add(p);
+                }
+            }
+            return lista;
+        }
+
+        public List<Presupuesto> listarPresupuestos()
+        {
+            List<Presupuesto> lista = new List<Presupuesto>();
+            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            {
+                lista.Add(p);
+            }
+            return lista;
+        }
     }
 }

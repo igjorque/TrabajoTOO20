@@ -4,16 +4,20 @@ using System.Text;
 
 namespace Dominio
 {
-    public class Presupuesto
+    public class Presupuesto : IEquatable<Presupuesto>
     {
-        private string id;
+        private string idPresu;
+        private Cliente client;
+        private Comercial comerc;
         private DateTime fecha;
         private List<LineaPresupuesto> lineas;
         private Estado estadoPr;
 
-        public Presupuesto(string id, DateTime fechaCreacion, List<LineaPresupuesto> lineas, Estado estado)
+        public Presupuesto(string id, Cliente cl, Comercial co, DateTime fechaCreacion, List<LineaPresupuesto> lineas, Estado estado)
         {
-            this.id = id;
+            this.idPresu = id;
+            this.client = cl;
+            this.comerc = co;
             this.fecha = fechaCreacion;
             this.lineas = lineas;
             this.estadoPr = estado;
@@ -21,7 +25,17 @@ namespace Dominio
 
         public string Id
         {
-            get { return this.id; }
+            get { return this.idPresu; }
+        }
+
+        public Cliente Client
+        {
+            get { return this.client; }
+        }
+
+        public Comercial Comerc
+        {
+            get { return this.comerc; }
         }
 
         public DateTime Fecha
@@ -38,6 +52,12 @@ namespace Dominio
         {
             get { return this.estadoPr; }
             set { this.estadoPr = value; }
+        }
+
+        public bool Equals(Presupuesto pr)
+        {
+            if (pr == null) { return false; }
+            if (pr.Id == this.Id) { return true; } else { return false; }
         }
     }
 }

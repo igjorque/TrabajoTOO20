@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Implementacion.Comercial
+namespace Implementacion
 {
     public class ComercialDTO1
     {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dominio
 {
-    public abstract class Persona
+    public abstract class Persona : IEquatable<Persona>
     {
         private string dni, nombre, telefono;
 
@@ -26,6 +26,12 @@ namespace Dominio
         public string Nombre
         {
             get { return nombre; }
+        }
+
+        public bool Equals(Persona pe)
+        {
+            if (pe == null) { return false; }
+            if (pe.Dni == this.Dni) { return true; } else { return false; }
         }
     }
 }

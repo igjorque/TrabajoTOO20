@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using Dominio;
 
-namespace Persistencia.Colecciones
+namespace Persistencia
 {
     public class CollectionClientes : KeyedCollection<string,Cliente>
     {

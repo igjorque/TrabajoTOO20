@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Implementacion.Presupuesto
+namespace Implementacion
 {
     public class PresupuestoDTO1
     {

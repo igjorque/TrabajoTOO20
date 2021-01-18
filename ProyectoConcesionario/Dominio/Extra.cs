@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dominio
 {
-    public class Extra
+    public class Extra : IEquatable<Extra>
     {
         private string nombre;
         private float precio;
@@ -16,13 +16,19 @@ namespace Dominio
 
         public string Nombre
         {
-            get { return nombre; }
+            get { return this.nombre; }
         }
 
         public float Precio
         {
-            get { return precio; }
+            get { return this.precio; }
             set { precio = value; }
+        }
+
+        public bool Equals(Extra ex)
+        {
+            if (ex == null) { return false; }
+            if (ex.Nombre == this.Nombre) { return true; } else { return false; }
         }
     }
 }

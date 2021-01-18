@@ -4,26 +4,19 @@ using System.Text;
 
 namespace Dominio
 {
-    public class LineaPresupuesto
+    public class LineaPresupuesto : IEquatable<LineaPresupuesto>
     {
-        private string idPresupuesto;
         private string idLinea;
         private Vehiculo vehiculoPr;
         private float precio;
         private Estado estadoLinea;
 
-        public LineaPresupuesto(string idPresupuesto, string idLinea, Vehiculo vehiculo, float precio, Estado est)
+        public LineaPresupuesto(string idLinea, Vehiculo vehiculo, float precio, Estado est)
         {
-            this.idPresupuesto = idPresupuesto;
             this.idLinea = idLinea;
             this.vehiculoPr = vehiculo;
             this.precio = precio;
             this.estadoLinea = est;
-        }
-
-        public string IdPresupuesto
-        {
-            get { return this.idPresupuesto; }
         }
 
         public string IdLinea
@@ -47,6 +40,12 @@ namespace Dominio
         {
             get { return this.estadoLinea; }
             set { this.estadoLinea = value; }
+        }
+
+        public bool Equals(LineaPresupuesto lp)
+        {
+            if (lp == null) { return false; }
+            if (lp.IdLinea == this.IdLinea) { return true; } else { return false; }
         }
     }
 }

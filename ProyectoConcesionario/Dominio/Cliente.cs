@@ -15,6 +15,7 @@ namespace Dominio
             get { return categoria; }
             set { categoria = value; }
         }
+
         public  double getDescuento()
         {
             return ((double)categoria) / 100.0;

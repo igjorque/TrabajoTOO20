@@ -1,5 +1,5 @@
 ﻿using System;
-using Persistencia.Colecciones;
+using Persistencia;
 
 namespace Persistencia
 {
@@ -8,6 +8,7 @@ namespace Persistencia
         private static CollectionClientes coleccionClientes;
         private static CollectionVehiculos coleccionVehiculos;
         private static CollectionPresupuestos coleccionPresupuestos;
+        private static CollectionLineasPresupuesto coleccionLineasPresupuesto;
         private BD() { }
 
         public static CollectionClientes ColeccionClientes
@@ -42,6 +43,18 @@ namespace Persistencia
                     coleccionPresupuestos = new CollectionPresupuestos();
                 }
                 return coleccionPresupuestos;
+            }
+        }
+
+        public static CollectionLineasPresupuesto ColeccionLineasPresupuesto
+        {
+            get
+            {
+                if (coleccionLineasPresupuesto == null)
+                {
+                    coleccionLineasPresupuesto = new CollectionLineasPresupuesto();
+                }
+                return coleccionLineasPresupuesto;
             }
         }
     }

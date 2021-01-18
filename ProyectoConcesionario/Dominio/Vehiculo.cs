@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dominio
 {
-    public abstract class Vehiculo
+    public abstract class Vehiculo : IEquatable<Vehiculo>
     {
         private string bastidor, marca, modelo;
         private int potencia;
@@ -46,6 +46,13 @@ namespace Dominio
             set { precioRec = value; }
         }
 
+        public bool Equals(Vehiculo vh)
+        {
+            if (vh == null) { return false; }
+            if (vh.Bastidor == this.Bastidor) { return true; } else { return false; }
+        }
+
         public abstract double getIVA();
+        public abstract Tipo getTipo();
     }
 }

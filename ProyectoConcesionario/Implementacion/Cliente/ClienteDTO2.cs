@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Dominio;
 
-namespace Implementacion.Cliente
+namespace Implementacion
 {
     public class ClienteDTO2
     {

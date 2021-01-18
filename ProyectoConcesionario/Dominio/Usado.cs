@@ -21,5 +21,9 @@ namespace Dominio
         {
             return 0.21;
         }
+        public override Tipo getTipo()
+        {
+            return Tipo.Usado;
+        }
     }
 }
