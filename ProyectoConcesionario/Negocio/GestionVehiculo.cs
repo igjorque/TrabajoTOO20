@@ -7,24 +7,24 @@ using System.Text;
 
 namespace Negocio
 {
-    public class GestionVehiculo
+    public static class GestionVehiculo
     {
-        public void altaVehiculo(Vehiculo v)
+        public static void altaVehiculo(Vehiculo v)
         {
             BD.ColeccionVehiculos.Add(v);
         }
 
-        public bool bajaVehiculo(VehiculoDTO1 v)
+        public static bool bajaVehiculo(VehiculoDTO1 v)
         {
             return BD.ColeccionVehiculos.Remove(v.Bastidor);
         }
 
-        public Vehiculo consultarVehiculo(VehiculoDTO1 v)
+        public static Vehiculo consultarVehiculo(VehiculoDTO1 v)
         {
             return BD.ColeccionVehiculos[v.Bastidor];
         }
 
-        public List<Vehiculo> listarVehiculos()
+        public static List<Vehiculo> listarVehiculos()
         {
             List<Vehiculo> lista = new List<Vehiculo>();
             foreach (Vehiculo v in BD.ColeccionVehiculos)
@@ -34,7 +34,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Vehiculo> listarUsados()
+        public static List<Vehiculo> listarUsados()
         {
             List<Vehiculo> lista = new List<Vehiculo>();
             foreach (Vehiculo v in BD.ColeccionVehiculos)
@@ -44,7 +44,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Vehiculo> listarNuevos()
+        public static List<Vehiculo> listarNuevos()
         {
             List<Vehiculo> lista = new List<Vehiculo>();
             foreach (Vehiculo v in BD.ColeccionVehiculos)

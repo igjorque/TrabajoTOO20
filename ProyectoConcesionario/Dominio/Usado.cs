@@ -7,16 +7,24 @@ namespace Dominio
     public class Usado : Vehiculo
     {
         private string matricula;
+        private DateTime fechaMatricula;
 
-        public Usado(string bastidor, string marca, string modelo, int potencia, double precioRec, string matricula) : base(bastidor, marca, modelo, potencia, precioRec)
+        public Usado(string bastidor, string marca, string modelo, int potencia, double precioRec, string matricula, DateTime fecha) : base(bastidor, marca, modelo, potencia, precioRec)
         {
             this.matricula = matricula;
+            this.fechaMatricula = fecha;
         }
 
         public string Matricula {
-            get { return matricula; }
-            set { matricula = value; }
+            get { return this.matricula; }
+            set { this.matricula = value; }
         }
+        public DateTime FechaMatricula
+        {
+            get { return this.fechaMatricula; }
+            set { this.fechaMatricula = value; }
+        }
+
         public override double getIVA()
         {
             return 0.21;

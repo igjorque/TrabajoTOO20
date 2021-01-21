@@ -11,3 +11,8 @@ C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\D
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FBuscarCliente.resources
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.FPrincipal.resources
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosCliente.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FListarClientes.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosVehiculo.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosVehiculoUsado.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosVehiculoNuevo.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FAltaVehiculo.resources

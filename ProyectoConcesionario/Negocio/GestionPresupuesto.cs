@@ -7,24 +7,24 @@ using System.Text;
 
 namespace Negocio
 {
-    public class GestionPresupuesto
+    public static class GestionPresupuesto
     {
-        public void altaPresupuesto(Presupuesto p)
+        public static void altaPresupuesto(Presupuesto p)
         {
             BD.ColeccionPresupuestos.Add(p);
         }
 
-        public Cliente clientePresupuesto(PresupuestoDTO1 p)
+        public static Cliente clientePresupuesto(PresupuestoDTO1 p)
         {
             return BD.ColeccionPresupuestos[p.IdPres].Client;
         }
 
-        public Estado estadoPresupuesto(PresupuestoDTO1 p)
+        public static Estado estadoPresupuesto(PresupuestoDTO1 p)
         {
             return BD.ColeccionPresupuestos[p.IdPres].EstadoPr;
         }
 
-        public Vehiculo presupuestoAceptado_(PresupuestoDTO1 p)
+        public static Vehiculo presupuestoAceptado_(PresupuestoDTO1 p)
         {
             if (estadoPresupuesto(p) == Estado.Aceptado) 
             { 
@@ -39,12 +39,12 @@ namespace Negocio
             return null;
         }
 
-        public Presupuesto consultarPresupuesto(PresupuestoDTO1 p)
+        public static Presupuesto consultarPresupuesto(PresupuestoDTO1 p)
         {
             return BD.ColeccionPresupuestos[p.IdPres];
         }
 
-        public List<Presupuesto> presupuestosCliente(ClienteDTO1 c)
+        public static List<Presupuesto> presupuestosCliente(ClienteDTO1 c)
         {
             List<Presupuesto> lista = new List<Presupuesto>();
             foreach (Presupuesto p in BD.ColeccionPresupuestos)
@@ -57,7 +57,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Presupuesto> presupuestosComercial(ComercialDTO1 c)
+        public static List<Presupuesto> presupuestosComercial(ComercialDTO1 c)
         {
             List<Presupuesto> lista = new List<Presupuesto>();
             foreach (Presupuesto p in BD.ColeccionPresupuestos)
@@ -70,7 +70,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Presupuesto> presupuestosVehiculo(VehiculoDTO1 v)
+        public static List<Presupuesto> presupuestosVehiculo(VehiculoDTO1 v)
         {
             List<Presupuesto> lista = new List<Presupuesto>();
             foreach (Presupuesto p in BD.ColeccionPresupuestos)
@@ -86,7 +86,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Presupuesto> presupuestosEstado(Estado e)
+        public static List<Presupuesto> presupuestosEstado(Estado e)
         {
             List<Presupuesto> lista = new List<Presupuesto>();
             foreach (Presupuesto p in BD.ColeccionPresupuestos)
@@ -99,7 +99,7 @@ namespace Negocio
             return lista;
         }
 
-        public List<Presupuesto> listarPresupuestos()
+        public static List<Presupuesto> listarPresupuestos()
         {
             List<Presupuesto> lista = new List<Presupuesto>();
             foreach (Presupuesto p in BD.ColeccionPresupuestos)

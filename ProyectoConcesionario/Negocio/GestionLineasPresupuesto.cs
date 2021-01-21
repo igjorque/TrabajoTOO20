@@ -7,14 +7,14 @@ using System.Text;
 
 namespace Negocio
 {
-    public class GestionLineasPresupuesto
+    public static class GestionLineasPresupuesto
     {
-        public void altaLineaPresupuesto(LineaPresupuesto lp)
+        public static void altaLineaPresupuesto(LineaPresupuesto lp)
         {
             BD.ColeccionLineasPresupuesto.Add(lp);
         }
 
-        public bool bajaLineaPresupuesto(LineaPresupuestoDTO1 lp)
+        public static bool bajaLineaPresupuesto(LineaPresupuestoDTO1 lp)
         {
             return BD.ColeccionLineasPresupuesto.Remove(lp.IdLinea);
         }

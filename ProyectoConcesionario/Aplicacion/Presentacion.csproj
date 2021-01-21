@@ -70,6 +70,12 @@
     <Compile Include="ClientesForms\FListarClientes.Designer.cs">
       <DependentUpon>FListarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FClave.Designer.cs">
+      <DependentUpon>FClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,30 @@
     <Compile Include="UserControls\ucDatosVehiculo.Designer.cs">
       <DependentUpon>ucDatosVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucDatosVehiculoNuevo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDatosVehiculoNuevo.Designer.cs">
+      <DependentUpon>ucDatosVehiculoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDatosVehiculoUsado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDatosVehiculoUsado.Designer.cs">
+      <DependentUpon>ucDatosVehiculoUsado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosForms\FAltaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiculosForms\FAltaVehiculo.Designer.cs">
+      <DependentUpon>FAltaVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiculosForms\FBajaVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiculosForms\FBajaVehiculo.Designer.cs">
+      <DependentUpon>FBajaVehiculo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClientesForms\FAltaCliente.resx">
       <DependentUpon>FAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesForms\FListarClientes.resx">
       <DependentUpon>FListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FClave.resx">
+      <DependentUpon>FClave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPrincipal.resx">
       <DependentUpon>FPrincipal.cs</DependentUpon>
@@ -124,6 +157,21 @@
     <EmbeddedResource Include="UserControls\ucDatosCliente.resx">
       <DependentUpon>ucDatosCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDatosVehiculo.resx">
+      <DependentUpon>ucDatosVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDatosVehiculoNuevo.resx">
+      <DependentUpon>ucDatosVehiculoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDatosVehiculoUsado.resx">
+      <DependentUpon>ucDatosVehiculoUsado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiculosForms\FAltaVehiculo.resx">
+      <DependentUpon>FAltaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiculosForms\FBajaVehiculo.resx">
+      <DependentUpon>FBajaVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,7 +187,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PresupuestosForms\" />
-    <Folder Include="VehiculosForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{81beadf2-34b8-4726-aff8-9193446748e0}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Implementacion\Implementacion.csproj">
+      <Project>{f7a25523-204e-4e14-8dd7-2a877d336093}</Project>
+      <Name>Implementacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{86ede87f-09ee-4c17-929e-cacca6d39baf}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

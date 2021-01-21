@@ -41,8 +41,8 @@
             this.tsListarVehiculos = new System.Windows.Forms.ToolStripMenuItem();
             this.presupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAltaPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsListarPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsConsultarPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsListarPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,25 +72,25 @@
             // tsAltaCliente
             // 
             this.tsAltaCliente.Name = "tsAltaCliente";
-            this.tsAltaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsAltaCliente.Size = new System.Drawing.Size(165, 22);
             this.tsAltaCliente.Text = "Alta Cliente";
             // 
             // tsBajaCliente
             // 
             this.tsBajaCliente.Name = "tsBajaCliente";
-            this.tsBajaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsBajaCliente.Size = new System.Drawing.Size(165, 22);
             this.tsBajaCliente.Text = "Baja Cliente";
             // 
             // tsConsultarCliente
             // 
             this.tsConsultarCliente.Name = "tsConsultarCliente";
-            this.tsConsultarCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsConsultarCliente.Size = new System.Drawing.Size(165, 22);
             this.tsConsultarCliente.Text = "Consultar Cliente";
             // 
             // tsListarClientes
             // 
             this.tsListarClientes.Name = "tsListarClientes";
-            this.tsListarClientes.Size = new System.Drawing.Size(180, 22);
+            this.tsListarClientes.Size = new System.Drawing.Size(165, 22);
             this.tsListarClientes.Text = "Listar Clientes";
             // 
             // vehículosToolStripMenuItem
@@ -115,6 +115,7 @@
             this.tsBajaVehiculo.Name = "tsBajaVehiculo";
             this.tsBajaVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsBajaVehiculo.Text = "Baja Vehículo";
+            this.tsBajaVehiculo.Click += new System.EventHandler(this.tsBajaVehiculo_Click);
             // 
             // tsConsultarVehiculo
             // 
@@ -144,17 +145,17 @@
             this.tsAltaPresupuesto.Size = new System.Drawing.Size(193, 22);
             this.tsAltaPresupuesto.Text = "Alta Presupuesto";
             // 
-            // tsListarPresupuestos
-            // 
-            this.tsListarPresupuestos.Name = "tsListarPresupuestos";
-            this.tsListarPresupuestos.Size = new System.Drawing.Size(193, 22);
-            this.tsListarPresupuestos.Text = "Listar Presupuestos";
-            // 
             // tsConsultarPresupuesto
             // 
             this.tsConsultarPresupuesto.Name = "tsConsultarPresupuesto";
             this.tsConsultarPresupuesto.Size = new System.Drawing.Size(193, 22);
             this.tsConsultarPresupuesto.Text = "Consultar Presupuesto";
+            // 
+            // tsListarPresupuestos
+            // 
+            this.tsListarPresupuestos.Name = "tsListarPresupuestos";
+            this.tsListarPresupuestos.Size = new System.Drawing.Size(193, 22);
+            this.tsListarPresupuestos.Text = "Listar Presupuestos";
             // 
             // FPrincipal
             // 
