@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Aplicacion
+namespace Aplicacion.ClientesForms
 {
-    public partial class Form1 : Form
+    public partial class FBajaCliente : Form
     {
-        public Form1()
+        public FBajaCliente()
         {
             InitializeComponent();
+            //Ejemplo de desactivación de campo del UC
+            this.ucDatos.tbNombre.Enabled = false;
         }
     }
 }

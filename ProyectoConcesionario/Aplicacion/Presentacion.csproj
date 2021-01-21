@@ -46,14 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ClientesForms\FAltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ClientesForms\FAltaCliente.Designer.cs">
+      <DependentUpon>FAltaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesForms\FBajaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FBajaCliente.Designer.cs">
+      <DependentUpon>FBajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesForms\FBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FBuscarCliente.Designer.cs">
+      <DependentUpon>FBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesForms\FListarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FListarClientes.Designer.cs">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrincipal.Designer.cs">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ucDatosCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDatosCliente.Designer.cs">
+      <DependentUpon>ucDatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDatosPresupuesto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDatosPresupuesto.Designer.cs">
+      <DependentUpon>ucDatosPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDatosVehiculo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDatosVehiculo.Designer.cs">
+      <DependentUpon>ucDatosVehiculo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClientesForms\FAltaCliente.resx">
+      <DependentUpon>FAltaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FBajaCliente.resx">
+      <DependentUpon>FBajaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FBuscarCliente.resx">
+      <DependentUpon>FBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FListarClientes.resx">
+      <DependentUpon>FListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrincipal.resx">
+      <DependentUpon>FPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +119,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\ucDatosCliente.resx">
+      <DependentUpon>ucDatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PresupuestosForms\" />
+    <Folder Include="VehiculosForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

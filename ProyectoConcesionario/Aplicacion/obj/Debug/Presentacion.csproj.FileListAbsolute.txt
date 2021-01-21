@@ -6,3 +6,8 @@ C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\D
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.exe
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FAltaCliente.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FBajaCliente.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FBuscarCliente.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.FPrincipal.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosCliente.resources

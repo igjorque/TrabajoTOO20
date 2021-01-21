@@ -6,3 +6,10 @@ C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debu
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.AssemblyInfo.cs
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.dll
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Implementacion.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Persistencia.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Implementacion.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\bin\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Negocio\obj\Debug\netstandard2.0\Negocio.csproj.CopyComplete
