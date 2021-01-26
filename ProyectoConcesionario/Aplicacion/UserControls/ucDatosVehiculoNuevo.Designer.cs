@@ -30,8 +30,8 @@
         {
             this.dgExtras = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgExtras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,8 +39,8 @@
             // 
             this.dgExtras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgExtras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Precio});
+            this.clNombre,
+            this.clPrecio});
             this.dgExtras.Location = new System.Drawing.Point(3, 31);
             this.dgExtras.Name = "dgExtras";
             this.dgExtras.Size = new System.Drawing.Size(244, 117);
@@ -55,15 +55,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Extras";
             // 
-            // Precio
+            // clNombre
             // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
+            this.clNombre.HeaderText = "Nombre";
+            this.clNombre.Name = "clNombre";
             // 
-            // Nombre
+            // clPrecio
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.clPrecio.HeaderText = "Precio";
+            this.clPrecio.Name = "clPrecio";
             // 
             // ucDatosVehiculoNuevo
             // 
@@ -82,7 +82,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.DataGridView dgExtras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrecio;
     }
 }

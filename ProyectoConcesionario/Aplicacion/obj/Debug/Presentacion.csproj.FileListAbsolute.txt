@@ -16,3 +16,15 @@ C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\D
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosVehiculoUsado.resources
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.UserControls.ucDatosVehiculoNuevo.resources
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FAltaVehiculo.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.FClave.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FBajaVehiculo.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Dominio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Implementacion.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Negocio.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Persistencia.dll
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Dominio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Implementacion.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Negocio.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\Debug\Persistencia.pdb
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FConsultarVehiculo.resources

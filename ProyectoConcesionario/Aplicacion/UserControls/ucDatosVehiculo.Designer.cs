@@ -61,6 +61,7 @@
             this.tbBastidor.Name = "tbBastidor";
             this.tbBastidor.Size = new System.Drawing.Size(120, 20);
             this.tbBastidor.TabIndex = 1;
+            this.tbBastidor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbMarca
             // 
@@ -68,6 +69,7 @@
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(120, 20);
             this.tbMarca.TabIndex = 3;
+            this.tbMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -84,6 +86,7 @@
             this.tbModelo.Name = "tbModelo";
             this.tbModelo.Size = new System.Drawing.Size(120, 20);
             this.tbModelo.TabIndex = 5;
+            this.tbModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -100,6 +103,7 @@
             this.tbPotencia.Name = "tbPotencia";
             this.tbPotencia.Size = new System.Drawing.Size(120, 20);
             this.tbPotencia.TabIndex = 7;
+            this.tbPotencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -116,6 +120,7 @@
             this.tbPrecioRec.Name = "tbPrecioRec";
             this.tbPrecioRec.Size = new System.Drawing.Size(120, 20);
             this.tbPrecioRec.TabIndex = 9;
+            this.tbPrecioRec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 

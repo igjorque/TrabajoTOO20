@@ -1,6 +1,6 @@
 ﻿namespace Aplicacion.VehiculosForms
 {
-    partial class FAltaVehiculo
+    partial class FConsultarVehiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -38,20 +38,20 @@
             this.ucDatos.Size = new System.Drawing.Size(570, 250);
             this.ucDatos.TabIndex = 0;
             // 
-            // FAltaVehiculo
+            // FConsultarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 271);
             this.Controls.Add(this.ucDatos);
-            this.Name = "FAltaVehiculo";
-            this.Text = "FAltaVehiculo";
+            this.Name = "FConsultarVehiculo";
+            this.Text = "FConsultarVehiculo";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal UserControls.ucDatosVehiculo ucDatos;
+        private UserControls.ucDatosVehiculo ucDatos;
     }
 }

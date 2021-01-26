@@ -109,6 +109,7 @@
             this.tsAltaVehiculo.Name = "tsAltaVehiculo";
             this.tsAltaVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsAltaVehiculo.Text = "Alta Vehículo";
+            this.tsAltaVehiculo.Click += new System.EventHandler(this.tsAltaVehiculo_Click);
             // 
             // tsBajaVehiculo
             // 
@@ -122,12 +123,14 @@
             this.tsConsultarVehiculo.Name = "tsConsultarVehiculo";
             this.tsConsultarVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsConsultarVehiculo.Text = "Consultar Vehículo";
+            this.tsConsultarVehiculo.Click += new System.EventHandler(this.tsConsultarVehiculo_Click);
             // 
             // tsListarVehiculos
             // 
             this.tsListarVehiculos.Name = "tsListarVehiculos";
             this.tsListarVehiculos.Size = new System.Drawing.Size(180, 22);
             this.tsListarVehiculos.Text = "Listar Vehículos";
+            this.tsListarVehiculos.Click += new System.EventHandler(this.tsListarVehiculos_Click);
             // 
             // presupuestosToolStripMenuItem
             // 

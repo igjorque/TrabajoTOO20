@@ -27,7 +27,7 @@ namespace Aplicacion
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            this.clave = this.lbClave.Text;
+            this.clave = this.tbClave.Text;
             this.Close();
         }
 

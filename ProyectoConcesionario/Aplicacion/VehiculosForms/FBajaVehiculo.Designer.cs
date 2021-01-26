@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucDatosVehiculo = new Aplicacion.UserControls.ucDatosVehiculo();
+            this.ucDatos = new Aplicacion.UserControls.ucDatosVehiculo();
             this.SuspendLayout();
             // 
-            // ucDatosVehiculo
+            // ucDatos
             // 
-            this.ucDatosVehiculo.Location = new System.Drawing.Point(12, 12);
-            this.ucDatosVehiculo.Name = "ucDatosVehiculo";
-            this.ucDatosVehiculo.Size = new System.Drawing.Size(570, 250);
-            this.ucDatosVehiculo.TabIndex = 0;
+            this.ucDatos.Location = new System.Drawing.Point(12, 12);
+            this.ucDatos.Name = "ucDatos";
+            this.ucDatos.Size = new System.Drawing.Size(570, 250);
+            this.ucDatos.TabIndex = 0;
             // 
             // FBajaVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 271);
-            this.Controls.Add(this.ucDatosVehiculo);
+            this.Controls.Add(this.ucDatos);
             this.Name = "FBajaVehiculo";
             this.Text = "FBajaVehiculo";
             this.ResumeLayout(false);
@@ -52,6 +52,6 @@
 
         #endregion
 
-        private UserControls.ucDatosVehiculo ucDatosVehiculo;
+        internal UserControls.ucDatosVehiculo ucDatos;
     }
 }

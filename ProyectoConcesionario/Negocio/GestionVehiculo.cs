@@ -21,7 +21,20 @@ namespace Negocio
 
         public static Vehiculo consultarVehiculo(VehiculoDTO1 v)
         {
-            return BD.ColeccionVehiculos[v.Bastidor];
+            if (BD.ColeccionVehiculos.Contains(v.Bastidor))
+            {
+                Vehiculo vaux = BD.ColeccionVehiculos[v.Bastidor];
+                return vaux;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static bool existeVehiculo(VehiculoDTO1 v)
+        {
+            return BD.ColeccionVehiculos.Contains(v.Bastidor);
         }
 
         public static List<Vehiculo> listarVehiculos()

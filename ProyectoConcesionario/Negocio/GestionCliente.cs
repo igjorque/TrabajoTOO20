@@ -13,7 +13,7 @@ namespace Negocio
         public static bool altaCliente(Cliente c)
         {
             BD.ColeccionClientes.Add(c);
-            if (this.consultarCliente(new ClienteDTO1(c.Dni)) != null)
+            if (consultarCliente(new ClienteDTO1(c.Dni)) != null)
             {
                 return true;
             }

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.tbMatricula = new System.Windows.Forms.TextBox();
             this.tbFechaMatriculacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.epFecha = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.epFecha)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,6 +52,7 @@
             this.tbMatricula.Name = "tbMatricula";
             this.tbMatricula.Size = new System.Drawing.Size(120, 20);
             this.tbMatricula.TabIndex = 1;
+            this.tbMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbFechaMatriculacion
             // 
@@ -56,6 +60,10 @@
             this.tbFechaMatriculacion.Name = "tbFechaMatriculacion";
             this.tbFechaMatriculacion.Size = new System.Drawing.Size(120, 20);
             this.tbFechaMatriculacion.TabIndex = 3;
+            this.tbFechaMatriculacion.Text = "Año/Mes/Día";
+            this.tbFechaMatriculacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFechaMatriculacion.Validating += new System.ComponentModel.CancelEventHandler(this.tbFechaMatriculacion_Validating);
+            this.tbFechaMatriculacion.Validated += new System.EventHandler(this.tbFechaMatriculacion_Validated);
             // 
             // label2
             // 
@@ -65,6 +73,10 @@
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha matriculación:";
+            // 
+            // epFecha
+            // 
+            this.epFecha.ContainerControl = this;
             // 
             // ucDatosVehiculoUsado
             // 
@@ -76,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ucDatosVehiculoUsado";
             this.Size = new System.Drawing.Size(258, 79);
+            ((System.ComponentModel.ISupportInitialize)(this.epFecha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,5 +100,6 @@
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox tbMatricula;
         internal System.Windows.Forms.TextBox tbFechaMatriculacion;
+        private System.Windows.Forms.ErrorProvider epFecha;
     }
 }

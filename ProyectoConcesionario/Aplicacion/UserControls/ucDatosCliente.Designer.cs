@@ -103,6 +103,7 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(146, 20);
             this.tbTelefono.TabIndex = 15;
+            this.tbTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -119,6 +120,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(146, 20);
             this.tbNombre.TabIndex = 13;
+            this.tbNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -135,6 +137,7 @@
             this.tbDni.Name = "tbDni";
             this.tbDni.Size = new System.Drawing.Size(145, 20);
             this.tbDni.TabIndex = 11;
+            this.tbDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
