@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aplicacion.VehiculosForms;
+using Aplicacion.ClientesForms;
 using Negocio;
 using Dominio;
 using Implementacion;
@@ -112,6 +113,81 @@ namespace Aplicacion
         private void tsListarVehiculos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsConsultarCliente_Click(object sender, EventArgs e)
+        {
+            FClave fc = new FClave("DNI del cliente: ");
+            DialogResult dr = fc.ShowDialog();
+            if(dr == DialogResult.OK)
+            {
+                ClienteDTO1 c = new ClienteDTO1(fc.Clave);
+                if (GestionCliente.existeCliente(c))
+                {
+                    FBuscarCliente fbc = new FBuscarCliente(GestionCliente.consultarCliente(c));
+                    fbc.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha encontrado el cliente con DNI " + fc.Clave + ".", "Cliente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void tsAltaCliente_Click(object sender, EventArgs e)
+        {
+            FClave fc = new FClave("DNI del cliente: ");
+            DialogResult dr = fc.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                ClienteDTO1 c = new ClienteDTO1(fc.Clave);
+                if (!GestionCliente.existeCliente(c))
+                {
+                    FAltaCliente fac = new FAltaCliente(c.Dni);
+                    DialogResult dr2=fac.ShowDialog();
+                    if (dr2 == DialogResult.OK)
+                    {
+                        GestionCliente.altaCliente(fac.Client);
+                        MessageBox.Show("El cliente se ha añadido correctamente.", "Cliente añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un cliente con DNI " + fc.Clave + ".", "Cliente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void tsBajaCliente_Click(object sender, EventArgs e)
+        {
+            FClave fc = new FClave("DNI del cliente: ");
+            DialogResult dr = fc.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                ClienteDTO1 c = new ClienteDTO1(fc.Clave);
+                if (GestionCliente.existeCliente(c))
+                {
+                    FBajaCliente fbc = new FBajaCliente(GestionCliente.consultarCliente(c));
+                    DialogResult dr2 = fbc.ShowDialog();
+                    if (dr2 == DialogResult.Yes)
+                    {
+                        GestionCliente.bajaCliente(fbc.Client);
+                        MessageBox.Show("El cliente se ha eliminado correctamente.", "Cliente eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha encontrado el cliente con DNI " + fc.Clave + ".", "Cliente no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void tsListarClientes_Click(object sender, EventArgs e)
+        {
+            FListarClientes flc = new FListarClientes();
+            flc.ShowDialog();
         }
     }
 }
