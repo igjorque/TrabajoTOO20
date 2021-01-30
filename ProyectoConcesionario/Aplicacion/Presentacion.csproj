@@ -132,6 +132,12 @@
     <Compile Include="VehiculosForms\FConsultarVehiculo.Designer.cs">
       <DependentUpon>FConsultarVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehiculosForms\FListarVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiculosForms\FListarVehiculos.Designer.cs">
+      <DependentUpon>FListarVehiculos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClientesForms\FAltaCliente.resx">
       <DependentUpon>FAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehiculosForms\FConsultarVehiculo.resx">
       <DependentUpon>FConsultarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiculosForms\FListarVehiculos.resx">
+      <DependentUpon>FListarVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
