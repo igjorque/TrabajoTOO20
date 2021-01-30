@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace Aplicacion.ClientesForms
 {
     public partial class FBuscarCliente : Form
     {
-        public FBuscarCliente()
+        public FBuscarCliente(Cliente cliente)
         {
             InitializeComponent();
+            ucDatos.Enabled = false;
+            ucDatos.tbDni.Text = cliente.Dni;
+            ucDatos.tbNombre.Text = cliente.Nombre;
+            ucDatos.tbTelefono.Text = cliente.Telefono;
+            if(cliente.Categoria == Categoria.A)
+            {
+                ucDatos.rbCatA.Checked = true;
+            }
+            if (cliente.Categoria == Categoria.B)
+            {
+                ucDatos.rbCatB.Checked = true;
+            }
+            if (cliente.Categoria == Categoria.C)
+            {
+                ucDatos.rbCatC.Checked = true;
+            }
         }
     }
 }

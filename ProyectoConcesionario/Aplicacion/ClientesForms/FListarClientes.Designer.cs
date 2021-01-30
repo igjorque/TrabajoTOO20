@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             this.gbCategoria = new System.Windows.Forms.GroupBox();
-            this.rbCatTodas = new System.Windows.Forms.RadioButton();
-            this.rbCatA = new System.Windows.Forms.RadioButton();
-            this.rbCatB = new System.Windows.Forms.RadioButton();
             this.rbCatC = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rbCatB = new System.Windows.Forms.RadioButton();
+            this.rbCatA = new System.Windows.Forms.RadioButton();
+            this.rbCatTodas = new System.Windows.Forms.RadioButton();
+            this.gridClientes = new System.Windows.Forms.DataGridView();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.gbCategoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCategoria
@@ -51,134 +48,123 @@
             this.gbCategoria.Controls.Add(this.rbCatB);
             this.gbCategoria.Controls.Add(this.rbCatA);
             this.gbCategoria.Controls.Add(this.rbCatTodas);
-            this.gbCategoria.Location = new System.Drawing.Point(429, 27);
+            this.gbCategoria.Location = new System.Drawing.Point(572, 33);
+            this.gbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbCategoria.Name = "gbCategoria";
-            this.gbCategoria.Size = new System.Drawing.Size(185, 47);
+            this.gbCategoria.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCategoria.Size = new System.Drawing.Size(247, 58);
             this.gbCategoria.TabIndex = 0;
             this.gbCategoria.TabStop = false;
             this.gbCategoria.Text = "Categoría";
             // 
+            // rbCatC
+            // 
+            this.rbCatC.AutoSize = true;
+            this.rbCatC.Location = new System.Drawing.Point(191, 25);
+            this.rbCatC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatC.Name = "rbCatC";
+            this.rbCatC.Size = new System.Drawing.Size(38, 21);
+            this.rbCatC.TabIndex = 3;
+            this.rbCatC.TabStop = true;
+            this.rbCatC.Text = "C";
+            this.rbCatC.UseVisualStyleBackColor = true;
+            this.rbCatC.Click += new System.EventHandler(this.rbCatC_Click);
+            // 
+            // rbCatB
+            // 
+            this.rbCatB.AutoSize = true;
+            this.rbCatB.Location = new System.Drawing.Point(140, 25);
+            this.rbCatB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatB.Name = "rbCatB";
+            this.rbCatB.Size = new System.Drawing.Size(38, 21);
+            this.rbCatB.TabIndex = 2;
+            this.rbCatB.TabStop = true;
+            this.rbCatB.Text = "B";
+            this.rbCatB.UseVisualStyleBackColor = true;
+            this.rbCatB.Click += new System.EventHandler(this.rbCatB_Click);
+            // 
+            // rbCatA
+            // 
+            this.rbCatA.AutoSize = true;
+            this.rbCatA.Location = new System.Drawing.Point(89, 23);
+            this.rbCatA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatA.Name = "rbCatA";
+            this.rbCatA.Size = new System.Drawing.Size(38, 21);
+            this.rbCatA.TabIndex = 1;
+            this.rbCatA.TabStop = true;
+            this.rbCatA.Text = "A";
+            this.rbCatA.UseVisualStyleBackColor = true;
+            this.rbCatA.Click += new System.EventHandler(this.rbCatA_Click);
+            // 
             // rbCatTodas
             // 
             this.rbCatTodas.AutoSize = true;
-            this.rbCatTodas.Location = new System.Drawing.Point(6, 20);
+            this.rbCatTodas.Location = new System.Drawing.Point(8, 25);
+            this.rbCatTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbCatTodas.Name = "rbCatTodas";
-            this.rbCatTodas.Size = new System.Drawing.Size(55, 17);
+            this.rbCatTodas.Size = new System.Drawing.Size(69, 21);
             this.rbCatTodas.TabIndex = 0;
             this.rbCatTodas.TabStop = true;
             this.rbCatTodas.Text = "Todas";
             this.rbCatTodas.UseVisualStyleBackColor = true;
             // 
-            // rbCatA
+            // gridClientes
             // 
-            this.rbCatA.AutoSize = true;
-            this.rbCatA.Location = new System.Drawing.Point(67, 19);
-            this.rbCatA.Name = "rbCatA";
-            this.rbCatA.Size = new System.Drawing.Size(32, 17);
-            this.rbCatA.TabIndex = 1;
-            this.rbCatA.TabStop = true;
-            this.rbCatA.Text = "A";
-            this.rbCatA.UseVisualStyleBackColor = true;
-            // 
-            // rbCatB
-            // 
-            this.rbCatB.AutoSize = true;
-            this.rbCatB.Location = new System.Drawing.Point(105, 20);
-            this.rbCatB.Name = "rbCatB";
-            this.rbCatB.Size = new System.Drawing.Size(32, 17);
-            this.rbCatB.TabIndex = 2;
-            this.rbCatB.TabStop = true;
-            this.rbCatB.Text = "B";
-            this.rbCatB.UseVisualStyleBackColor = true;
-            // 
-            // rbCatC
-            // 
-            this.rbCatC.AutoSize = true;
-            this.rbCatC.Location = new System.Drawing.Point(143, 20);
-            this.rbCatC.Name = "rbCatC";
-            this.rbCatC.Size = new System.Drawing.Size(32, 17);
-            this.rbCatC.TabIndex = 3;
-            this.rbCatC.TabStop = true;
-            this.rbCatC.Text = "C";
-            this.rbCatC.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DNI,
             this.Nombre,
             this.Telefono,
             this.Categoria});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 278);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(511, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.gridClientes.Location = new System.Drawing.Point(73, 342);
+            this.gridClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridClientes.Name = "gridClientes";
+            this.gridClientes.RowHeadersWidth = 51;
+            this.gridClientes.Size = new System.Drawing.Size(681, 185);
+            this.gridClientes.TabIndex = 1;
             // 
             // DNI
             // 
             this.DNI.HeaderText = "DNI";
+            this.DNI.MinimumWidth = 6;
             this.DNI.Name = "DNI";
+            this.DNI.Width = 125;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
             // 
             // Telefono
             // 
             this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.MinimumWidth = 6;
             this.Telefono.Name = "Telefono";
+            this.Telefono.Width = 125;
             // 
             // Categoria
             // 
             this.Categoria.HeaderText = "Categoría";
+            this.Categoria.MinimumWidth = 6;
             this.Categoria.Name = "Categoria";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(580, 238);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "la idea es usar este control";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 269);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(313, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "< clic en la flecha que aparece al seleccionarlo para editar cosas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(631, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "este control es para filtrar por categorías";
+            this.Categoria.Width = 125;
             // 
             // FListarClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 456);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1293, 561);
+            this.Controls.Add(this.gridClientes);
             this.Controls.Add(this.gbCategoria);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FListarClientes";
             this.Text = "FListarClientes";
             this.gbCategoria.ResumeLayout(false);
             this.gbCategoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -189,13 +175,10 @@
         private System.Windows.Forms.RadioButton rbCatB;
         private System.Windows.Forms.RadioButton rbCatA;
         private System.Windows.Forms.RadioButton rbCatTodas;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
