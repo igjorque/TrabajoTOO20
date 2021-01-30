@@ -29,7 +29,11 @@ namespace Negocio
         {
             return BD.ColeccionClientes.Remove(c);
         }
-
+        //PRE: Recibe un clienteDTO1 (tan solo conocemos su dni)
+        //POST: devuelve true si dicho cliente está en la BD.
+        public static bool existeCliente(ClienteDTO1 c) {
+            return BD.ColeccionClientes.Contains(c.Dni);
+        }
         //PRE: Recibe un clienteDTO1 (tan solo conocemos su dni)
         //POST: devuelve un Cliente con el dni del CLienteDTO1 introducido.
         public static Cliente consultarCliente(ClienteDTO1 c)
