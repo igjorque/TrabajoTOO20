@@ -12,6 +12,7 @@ using Aplicacion.ClientesForms;
 using Negocio;
 using Dominio;
 using Implementacion;
+using Aplicacion.PresupuestosForms;
 
 namespace Aplicacion
 {
@@ -197,9 +198,12 @@ namespace Aplicacion
                 if (GestionVehiculo.existeVehiculo(v))
                 {
                     FConsultarVehiculo fcv = new FConsultarVehiculo(GestionVehiculo.consultarVehiculo(v));
-                    fcv.ShowDialog();
+                    fcv.Show();
                 }
-                
+                else
+                {
+                    MessageBox.Show("No se ha encontrado el vehículo con número de bastidor " + fc.Clave + ".", "Vehículo no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -211,9 +215,48 @@ namespace Aplicacion
         private void tsListarVehiculos_Click(object sender, EventArgs e)
         {
             List<Vehiculo> lv = GestionVehiculo.listarVehiculos();
-            FListarVehiculos flv = new FListarVehiculos(lv);
-            flv.ShowDialog();
+            if (lv.Count == 0)
+            {
+                MessageBox.Show("No hay vehículos almacenados en la BD.", "Sin vehículos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FListarVehiculos flv = new FListarVehiculos(lv);
+                flv.Show();
+            }
         }
 
+        private void tsAltaPresupuesto_Click(object sender, EventArgs e)
+        {
+            FClave fc = new FClave("ID Presupuesto:");
+            DialogResult dr = fc.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                PresupuestoDTO1 pdto = new PresupuestoDTO1(fc.Clave);
+                if (GestionPresupuesto.consultarPresupuesto(pdto) != null)
+                {
+                    MessageBox.Show("El presupuesto con ID " + fc.Clave + " ya existe.", "Presupuesto existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    FAltaPresupuesto fap = new FAltaPresupuesto();
+                    DialogResult dr1 = fap.ShowDialog();
+                    if (dr1 == DialogResult.OK)
+                    {
+                        GestionPresupuesto.altaPresupuesto(fap.Presu);
+                    }
+                }
+            }
+        }
+
+        private void tsConsultarPresupuesto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsListarPresupuestos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace Negocio
             }
             return lista;
         }
-
+        /*
         public static List<Presupuesto> presupuestosComercial(ComercialDTO1 c)
         {
             List<Presupuesto> lista = new List<Presupuesto>();
@@ -69,7 +69,7 @@ namespace Negocio
             }
             return lista;
         }
-
+        */
         public static List<Presupuesto> presupuestosVehiculo(VehiculoDTO1 v)
         {
             List<Presupuesto> lista = new List<Presupuesto>();

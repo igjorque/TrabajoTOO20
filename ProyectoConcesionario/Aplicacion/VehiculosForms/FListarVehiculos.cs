@@ -13,11 +13,14 @@ namespace Aplicacion.VehiculosForms
 {
     public partial class FListarVehiculos : Form
     {
-        private List<Vehiculo> lv;
+        private BindingList<Vehiculo> blv;
+
         public FListarVehiculos(List<Vehiculo> lv)
         {
             InitializeComponent();
-            this.lv = lv;
+            this.blv = new BindingList<Vehiculo>(lv);
+            BindingSource bsv = new BindingSource(this.blv, null);
+            this.dgVehiculos.DataSource = bsv;
         }
     }
 }

@@ -8,16 +8,16 @@ namespace Dominio
     {
         private string idPresu;
         private Cliente client;
-        private Comercial comerc;
+        //private Comercial comerc;
         private DateTime fecha;
         private List<LineaPresupuesto> lineas;
         private Estado estadoPr;
 
-        public Presupuesto(string id, Cliente cl, Comercial co, DateTime fechaCreacion, List<LineaPresupuesto> lineas, Estado estado)
+        public Presupuesto(string id, Cliente cl, /*Comercial co,*/ DateTime fechaCreacion, List<LineaPresupuesto> lineas, Estado estado)
         {
             this.idPresu = id;
             this.client = cl;
-            this.comerc = co;
+            //this.comerc = co;
             this.fecha = fechaCreacion;
             this.lineas = lineas;
             this.estadoPr = estado;
@@ -32,12 +32,12 @@ namespace Dominio
         {
             get { return this.client; }
         }
-
+        /*
         public Comercial Comerc
         {
             get { return this.comerc; }
         }
-
+        */
         public DateTime Fecha
         {
             get { return this.fecha; }

@@ -74,28 +74,28 @@
             // tsAltaCliente
             // 
             this.tsAltaCliente.Name = "tsAltaCliente";
-            this.tsAltaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsAltaCliente.Size = new System.Drawing.Size(165, 22);
             this.tsAltaCliente.Text = "Alta Cliente";
             this.tsAltaCliente.Click += new System.EventHandler(this.tsAltaCliente_Click);
             // 
             // tsBajaCliente
             // 
             this.tsBajaCliente.Name = "tsBajaCliente";
-            this.tsBajaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsBajaCliente.Size = new System.Drawing.Size(165, 22);
             this.tsBajaCliente.Text = "Baja Cliente";
             this.tsBajaCliente.Click += new System.EventHandler(this.tsBajaCliente_Click);
             // 
             // tsConsultarCliente
             // 
             this.tsConsultarCliente.Name = "tsConsultarCliente";
-            this.tsConsultarCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsConsultarCliente.Size = new System.Drawing.Size(165, 22);
             this.tsConsultarCliente.Text = "Consultar Cliente";
             this.tsConsultarCliente.Click += new System.EventHandler(this.tsConsultarCliente_Click);
             // 
             // tsListarClientes
             // 
             this.tsListarClientes.Name = "tsListarClientes";
-            this.tsListarClientes.Size = new System.Drawing.Size(180, 22);
+            this.tsListarClientes.Size = new System.Drawing.Size(165, 22);
             this.tsListarClientes.Text = "Listar Clientes";
             this.tsListarClientes.Click += new System.EventHandler(this.tsListarClientes_Click);
             // 
@@ -153,18 +153,21 @@
             this.tsAltaPresupuesto.Name = "tsAltaPresupuesto";
             this.tsAltaPresupuesto.Size = new System.Drawing.Size(193, 22);
             this.tsAltaPresupuesto.Text = "Alta Presupuesto";
+            this.tsAltaPresupuesto.Click += new System.EventHandler(this.tsAltaPresupuesto_Click);
             // 
             // tsConsultarPresupuesto
             // 
             this.tsConsultarPresupuesto.Name = "tsConsultarPresupuesto";
             this.tsConsultarPresupuesto.Size = new System.Drawing.Size(193, 22);
             this.tsConsultarPresupuesto.Text = "Consultar Presupuesto";
+            this.tsConsultarPresupuesto.Click += new System.EventHandler(this.tsConsultarPresupuesto_Click);
             // 
             // tsListarPresupuestos
             // 
             this.tsListarPresupuestos.Name = "tsListarPresupuestos";
             this.tsListarPresupuestos.Size = new System.Drawing.Size(193, 22);
             this.tsListarPresupuestos.Text = "Listar Presupuestos";
+            this.tsListarPresupuestos.Click += new System.EventHandler(this.tsListarPresupuestos_Click);
             // 
             // FPrincipal
             // 
