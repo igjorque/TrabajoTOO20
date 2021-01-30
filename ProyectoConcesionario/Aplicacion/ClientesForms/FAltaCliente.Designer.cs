@@ -33,17 +33,19 @@
             // 
             // ucDatos
             // 
-            this.ucDatos.Location = new System.Drawing.Point(12, 12);
+            this.ucDatos.Location = new System.Drawing.Point(14, 14);
+            this.ucDatos.Margin = new System.Windows.Forms.Padding(5);
             this.ucDatos.Name = "ucDatos";
-            this.ucDatos.Size = new System.Drawing.Size(254, 178);
+            this.ucDatos.Size = new System.Drawing.Size(341, 220);
             this.ucDatos.TabIndex = 0;
             // 
             // FAltaCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 201);
+            this.ClientSize = new System.Drawing.Size(372, 247);
             this.Controls.Add(this.ucDatos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FAltaCliente";
             this.Text = "FAltaCliente";
             this.ResumeLayout(false);
