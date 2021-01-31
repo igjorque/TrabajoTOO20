@@ -28,8 +28,10 @@ namespace Aplicacion.ClientesForms
             lord.Sort(Cliente.ComparaDNI);
             foreach(Cliente c in lord)
             {
+                
                 listBox1.Items.Add(c.Dni);
                 listBox2.Items.Add(c.Apellido+", "+c.Nombre);
+                listBox3.Items.Add(GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)));
             }
         }
 
@@ -45,6 +47,7 @@ namespace Aplicacion.ClientesForms
             {
                 listBox1.Items.Add(c.Dni);
                 listBox2.Items.Add(c.Apellido + ", " + c.Nombre);
+                listBox3.Items.Add(GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)));
             }
         }
 
@@ -52,5 +55,22 @@ namespace Aplicacion.ClientesForms
         {
             this.Close();
         }
+
+        private void btnImporte_Click(object sender, EventArgs e)
+        {
+
+
+                this.listBox1.Items.Clear();
+                this.listBox2.Items.Clear();
+                this.listBox3.Items.Clear();
+                List<Cliente> lord = GestionCliente.listarClientes();
+                lord.Sort(Cliente.ComparaNombre);
+                foreach (Cliente c in lord)
+                {
+                    listBox1.Items.Add(c.Dni);
+                    listBox2.Items.Add(c.Apellido + ", " + c.Nombre);
+                    listBox3.Items.Add(GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)));
+                }
+                    }
     }
 }

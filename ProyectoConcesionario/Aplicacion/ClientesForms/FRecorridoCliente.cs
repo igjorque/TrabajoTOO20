@@ -26,7 +26,7 @@ namespace Aplicacion.ClientesForms
                 Cliente c = (Cliente)bindingSource1.Current;
                 tbDNI.Text = c.Dni;
                 tbApellidos.Text = c.Apellido;
-                //tbImporte.Text=
+                tbImporte.Text = GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)).ToString();
                 tbNombre.Text = c.Nombre;
             }
             else
@@ -44,7 +44,7 @@ namespace Aplicacion.ClientesForms
             {
                 tbDNI.Text = c.Dni;
                 tbApellidos.Text = c.Apellido;
-                //tbImporte.Text=
+                tbImporte.Text=GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)).ToString();
                 tbNombre.Text = c.Nombre;
             }
         }

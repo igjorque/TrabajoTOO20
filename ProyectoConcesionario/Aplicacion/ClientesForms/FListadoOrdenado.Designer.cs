@@ -93,6 +93,7 @@ namespace Aplicacion.ClientesForms
             this.btnImporte.TabIndex = 5;
             this.btnImporte.Text = "Importe";
             this.btnImporte.UseVisualStyleBackColor = true;
+            this.btnImporte.Click += new System.EventHandler(this.btnImporte_Click);
             // 
             // btnCerrar
             // 
