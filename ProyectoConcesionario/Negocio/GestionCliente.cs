@@ -98,6 +98,8 @@ namespace Negocio
             return lista;
         }
 
+        //PRE: Recibe un clienteDTO1 (tan solo conocemos su DNI).
+        //POST: devuelve la cantidad del importe de este cliente.
         public static double getPresupuestos(ClienteDTO1 c)
         {
             double sum = 0;
