@@ -21,12 +21,14 @@ namespace Aplicacion.ClientesForms
             ucDatos.tbDni.Enabled = false;
             ucDatos.tbNombre.Enabled = false;
             ucDatos.tbTelefono.Enabled = false;
+            ucDatos.tbApellido.Enabled = false;
             ucDatos.rbCatA.Enabled = false;
             ucDatos.rbCatB.Enabled = false;
             ucDatos.rbCatC.Enabled = false;
             ucDatos.tbDni.Text = cliente.Dni;
             ucDatos.tbNombre.Text = cliente.Nombre;
             ucDatos.tbTelefono.Text = cliente.Telefono;
+            ucDatos.tbApellido.Text = cliente.Apellido;
             if (cliente.Categoria == Categoria.A)
             {
                 ucDatos.rbCatA.Checked = true;

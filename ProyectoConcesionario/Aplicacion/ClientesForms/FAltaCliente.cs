@@ -38,7 +38,7 @@ namespace Aplicacion.ClientesForms
             if (this.ucDatos.tbDni.Text == "" || this.ucDatos.tbNombre.Text == "" || this.ucDatos.tbTelefono.Text == "") { valido = false; }
             if (valido == true)
             {
-                Cliente c = new Cliente(this.ucDatos.tbDni.Text, this.ucDatos.tbNombre.Text, this.ucDatos.tbTelefono.Text, cat);
+                Cliente c = new Cliente(this.ucDatos.tbDni.Text, this.ucDatos.tbNombre.Text, this.ucDatos.tbTelefono.Text, this.ucDatos.tbApellido.Text, cat);
                 this.client = c;
                 this.DialogResult = DialogResult.OK;
             }

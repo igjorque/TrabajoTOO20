@@ -20,6 +20,7 @@ namespace Aplicacion.ClientesForms
             ucDatos.tbDni.Text = cliente.Dni;
             ucDatos.tbNombre.Text = cliente.Nombre;
             ucDatos.tbTelefono.Text = cliente.Telefono;
+            ucDatos.tbApellido.Text = cliente.Apellido;
             if(cliente.Categoria == Categoria.A)
             {
                 ucDatos.rbCatA.Checked = true;

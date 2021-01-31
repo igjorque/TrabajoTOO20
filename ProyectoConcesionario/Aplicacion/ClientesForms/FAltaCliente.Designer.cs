@@ -36,16 +36,16 @@
             this.ucDatos.Location = new System.Drawing.Point(14, 14);
             this.ucDatos.Margin = new System.Windows.Forms.Padding(5);
             this.ucDatos.Name = "ucDatos";
-            this.ucDatos.Size = new System.Drawing.Size(341, 220);
+            this.ucDatos.Size = new System.Drawing.Size(377, 263);
             this.ucDatos.TabIndex = 0;
             // 
             // FAltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 247);
+            this.ClientSize = new System.Drawing.Size(405, 291);
             this.Controls.Add(this.ucDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FAltaCliente";
             this.Text = "FAltaCliente";
             this.ResumeLayout(false);
