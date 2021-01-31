@@ -336,5 +336,24 @@ namespace Aplicacion
             FRecorridoCliente frc = new FRecorridoCliente();
             frc.Show();
         }
+
+        private void tsImporteCliente_Click(object sender, EventArgs e)
+        {
+            FClave fc = new FClave("ID Cliente (DNI):");
+            DialogResult dr = fc.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                ClienteDTO1 cdto = new ClienteDTO1(fc.Clave);
+                if (GestionCliente.existeCliente(cdto))
+                {
+                    MessageBox.Show("El importe total del cliente " + fc.Clave + " es " + GestionCliente.getPresupuestos(cdto), "Importe total", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El cliente introducido no existe", "Cliente inexistente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+            }
+        }
     }
 }
