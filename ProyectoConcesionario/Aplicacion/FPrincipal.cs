@@ -258,5 +258,23 @@ namespace Aplicacion
         {
 
         }
+
+        private void listadoOrdenadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FListadoOrdenado flo = new FListadoOrdenado();
+            flo.Show();
+        }
+
+        private void consultarPorDNIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FBuscarClienteOtro fbco = new FBuscarClienteOtro();
+            fbco.Show();
+        }
+
+        private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRecorridoCliente frc = new FRecorridoCliente();
+            frc.Show();
+        }
     }
 }

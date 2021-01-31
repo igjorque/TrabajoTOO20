@@ -64,11 +64,29 @@
     <Compile Include="ClientesForms\FBuscarCliente.Designer.cs">
       <DependentUpon>FBuscarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesForms\FBuscarClienteOtro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FBuscarClienteOtro.Designer.cs">
+      <DependentUpon>FBuscarClienteOtro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesForms\FListadoOrdenado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FListadoOrdenado.Designer.cs">
+      <DependentUpon>FListadoOrdenado.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientesForms\FListarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientesForms\FListarClientes.Designer.cs">
       <DependentUpon>FListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesForms\FRecorridoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesForms\FRecorridoCliente.Designer.cs">
+      <DependentUpon>FRecorridoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FClave.cs">
       <SubType>Form</SubType>
@@ -153,8 +171,17 @@
     <EmbeddedResource Include="ClientesForms\FBuscarCliente.resx">
       <DependentUpon>FBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FBuscarClienteOtro.resx">
+      <DependentUpon>FBuscarClienteOtro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FListadoOrdenado.resx">
+      <DependentUpon>FListadoOrdenado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientesForms\FListarClientes.resx">
       <DependentUpon>FListarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientesForms\FRecorridoCliente.resx">
+      <DependentUpon>FRecorridoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FClave.resx">
       <DependentUpon>FClave.cs</DependentUpon>
