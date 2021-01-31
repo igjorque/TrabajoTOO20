@@ -19,7 +19,7 @@ namespace Aplicacion
     public partial class FPrincipal : Form
     {
         /// <summary>
-        /// 
+        /// Constructor del formulario.
         /// </summary>
         public FPrincipal()
         {
@@ -27,7 +27,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsConsultarCliente.
+        /// Gestiona la operación de consulta de un cliente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -51,7 +52,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsAltaCliente.
+        /// Gestiona la operación de alta de un nuevo cliente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -65,6 +67,8 @@ namespace Aplicacion
                 if (!GestionCliente.existeCliente(c))
                 {
                     FAltaCliente fac = new FAltaCliente(c.Dni);
+                    fac.ucDatos.tbDni.Text = fc.Clave; //Establece el valor del campo al introducido anteriormente
+                    fac.ucDatos.tbDni.Enabled = false; //Evita que este valor se pueda cambiar
                     DialogResult dr2 = fac.ShowDialog();
                     if (dr2 == DialogResult.OK)
                     {
@@ -81,7 +85,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsBajaCliente.
+        /// Gestiona la operación de baja de un cliente.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -111,7 +116,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsListarClientes.
+        /// Gestiona la operación de listado de todos los clientes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -122,7 +128,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsAltaVehiculo.
+        /// Gestiona la operación de alta de un nuevo vehículo.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -151,7 +158,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsBajaVehiculo.
+        /// Gestiona la operación de baja lógica de un vehículo (cambia su stock a false - no disponible)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -182,7 +190,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsConsultarVehiculo.
+        /// Gestiona la operación de consulta de un vehículo.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -208,7 +217,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsListarVehiculos.
+        /// Gestiona la operación de listado de todos los vehículos.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -226,6 +236,12 @@ namespace Aplicacion
             }
         }
 
+        /// <summary>
+        /// Método de respuesta al evento de click en el menú tsAltaPresupuesto.
+        /// Gestiona la creación de un nuevo presupuesto.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsAltaPresupuesto_Click(object sender, EventArgs e)
         {
             FClave fc = new FClave("ID Presupuesto:");
@@ -240,6 +256,7 @@ namespace Aplicacion
                 else
                 {
                     FAltaPresupuesto fap = new FAltaPresupuesto();
+                    fap.tbIDPresupuesto.Text = fc.Clave;
                     DialogResult dr1 = fap.ShowDialog();
                     if (dr1 == DialogResult.OK)
                     {
@@ -249,28 +266,62 @@ namespace Aplicacion
             }
         }
 
+        /// <summary>
+        /// Método de respuesta al evento de click en el menú tsConsultarPresupuesto.
+        /// Gestiona la operación de consulta de un presupuesto.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsConsultarPresupuesto_Click(object sender, EventArgs e)
         {
-
+            FClave fc = new FClave("ID del presupuesto:");
+            DialogResult dr = fc.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                FConsultarPresupuesto fcp = new FConsultarPresupuesto(GestionPresupuesto.consultarPresupuesto(new PresupuestoDTO1(fc.Clave)));
+                fcp.Show();
+            }
         }
 
+        /// <summary>
+        /// Método de respuesta al evento de click en el menú tsListarPresupuesto.
+        /// Gestiona la operación de listado de todos los presupuestos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsListarPresupuestos_Click(object sender, EventArgs e)
         {
-
+            FListarPresupuestos flp = new FListarPresupuestos(GestionPresupuesto.listarPresupuestos());
+            flp.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listadoOrdenadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FListadoOrdenado flo = new FListadoOrdenado();
             flo.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void consultarPorDNIToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FBuscarClienteOtro fbco = new FBuscarClienteOtro();
             fbco.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FRecorridoCliente frc = new FRecorridoCliente();

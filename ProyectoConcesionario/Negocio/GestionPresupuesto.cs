@@ -41,7 +41,15 @@ namespace Negocio
 
         public static Presupuesto consultarPresupuesto(PresupuestoDTO1 p)
         {
-            return BD.ColeccionPresupuestos[p.IdPres];
+            if (BD.ColeccionPresupuestos.Contains(p.IdPres))
+            {
+                return BD.ColeccionPresupuestos[p.IdPres];
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         public static List<Presupuesto> presupuestosCliente(ClienteDTO1 c)

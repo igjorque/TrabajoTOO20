@@ -49,6 +49,7 @@
             // 
             // tbIDPresupuesto
             // 
+            this.tbIDPresupuesto.Enabled = false;
             this.tbIDPresupuesto.Location = new System.Drawing.Point(122, 37);
             this.tbIDPresupuesto.Name = "tbIDPresupuesto";
             this.tbIDPresupuesto.Size = new System.Drawing.Size(119, 20);
@@ -185,8 +186,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbIDPresupuesto;
         private System.Windows.Forms.TextBox tbIDCliente;
         private System.Windows.Forms.TextBox tbFecha;
         private System.Windows.Forms.DataGridView dgLineas;
@@ -200,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clPrecio;
         private System.Windows.Forms.DataGridViewComboBoxColumn clEstado;
         private System.Windows.Forms.ErrorProvider epFecha;
+        internal System.Windows.Forms.TextBox tbIDPresupuesto;
     }
 }

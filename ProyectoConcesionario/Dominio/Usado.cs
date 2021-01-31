@@ -9,7 +9,7 @@ namespace Dominio
         private string matricula;
         private DateTime fechaMatricula;
 
-        public Usado(string bastidor, string marca, string modelo, int potencia, double precioRec, string matricula, DateTime fecha) : base(bastidor, marca, modelo, potencia, precioRec)
+        public Usado(string bastidor, string marca, string modelo, int potencia, double precioRec, bool stock, string matricula, DateTime fecha) : base(bastidor, marca, modelo, potencia, precioRec, stock)
         {
             this.matricula = matricula;
             this.fechaMatricula = fecha;

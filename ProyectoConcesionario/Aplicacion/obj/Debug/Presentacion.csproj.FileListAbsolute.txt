@@ -29,3 +29,9 @@ C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\bin\D
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FConsultarVehiculo.resources
 C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.VehiculosForms.FListarVehiculos.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FBuscarClienteOtro.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FListadoOrdenado.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.ClientesForms.FRecorridoCliente.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.PresupuestosForms.FAltaPresupuesto.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.PresupuestosForms.FConsultarPresupuesto.resources
+C:\Users\Phobos\Source\Repos\TrabajoTOO20\ProyectoConcesionario\Aplicacion\obj\Debug\Aplicacion.PresupuestosForms.FListarPresupuestos.resources

@@ -15,14 +15,22 @@ namespace Aplicacion.VehiculosForms
     public partial class FAltaVehiculo : Form
     {
         private Vehiculo vehic;
+
+        /// <summary>
+        /// Constructor del formulario.
+        /// </summary>
         public FAltaVehiculo()
         {
             InitializeComponent();
+            this.ucDatos.tbBastidor.Enabled = false;
             this.ucDatos.rbNuevo.CheckedChanged += new EventHandler(this.rbCheckedChanged);
             this.ucDatos.rbUsado.CheckedChanged += new EventHandler(this.rbCheckedChanged);
             this.ucDatos.btAceptar.Click += new EventHandler(this.CrearVehiculo);
         }
 
+        /// <summary>
+        /// Propiedad para obtener el vehículo creado mediante el formulario.
+        /// </summary>
         public Vehiculo Vehic
         {
             get
@@ -31,6 +39,11 @@ namespace Aplicacion.VehiculosForms
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbCheckedChanged(object sender, EventArgs e)
         {
             if (this.ucDatos.rbNuevo.Checked == true)
@@ -62,6 +75,11 @@ namespace Aplicacion.VehiculosForms
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CrearVehiculo(object sender, EventArgs e)
         {
             if (this.ucDatos.rbNuevo.Checked)
@@ -78,7 +96,7 @@ namespace Aplicacion.VehiculosForms
                     ex = new Extra(nombre, precio);
                     le.Add(ex);
                 }
-                Nuevo n = new Nuevo(this.ucDatos.tbBastidor.Text, this.ucDatos.tbMarca.Text, this.ucDatos.tbModelo.Text, int.Parse(this.ucDatos.tbPotencia.Text), double.Parse(this.ucDatos.tbPrecioRec.Text), le);
+                Nuevo n = new Nuevo(this.ucDatos.tbBastidor.Text, this.ucDatos.tbMarca.Text, this.ucDatos.tbModelo.Text, int.Parse(this.ucDatos.tbPotencia.Text), double.Parse(this.ucDatos.tbPrecioRec.Text), true, le);
                 this.vehic = n;
             }
             else
@@ -86,7 +104,7 @@ namespace Aplicacion.VehiculosForms
                 ucDatosVehiculoUsado ucdu = this.Controls["ucDatosUsado"] as ucDatosVehiculoUsado;
                 string [] fecha = ucdu.tbFechaMatriculacion.Text.Split('/');
                 DateTime dt = new DateTime(int.Parse(fecha[0]), int.Parse(fecha[1]), int.Parse(fecha[2]));
-                Usado u = new Usado(this.ucDatos.tbBastidor.Text, this.ucDatos.tbMarca.Text, this.ucDatos.tbModelo.Text, int.Parse(this.ucDatos.tbPotencia.Text), double.Parse(this.ucDatos.tbPrecioRec.Text), ucdu.tbMatricula.Text, dt);
+                Usado u = new Usado(this.ucDatos.tbBastidor.Text, this.ucDatos.tbMarca.Text, this.ucDatos.tbModelo.Text, int.Parse(this.ucDatos.tbPotencia.Text), double.Parse(this.ucDatos.tbPrecioRec.Text), true, ucdu.tbMatricula.Text, dt);
                 this.vehic = u;
             }
         }

@@ -34,10 +34,13 @@
             // 
             // dgVehiculos
             // 
+            this.dgVehiculos.AllowUserToAddRows = false;
+            this.dgVehiculos.AllowUserToDeleteRows = false;
             this.dgVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgVehiculos.Location = new System.Drawing.Point(0, 0);
             this.dgVehiculos.Name = "dgVehiculos";
+            this.dgVehiculos.ReadOnly = true;
             this.dgVehiculos.Size = new System.Drawing.Size(643, 442);
             this.dgVehiculos.TabIndex = 0;
             // 

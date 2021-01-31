@@ -8,7 +8,7 @@ namespace Dominio
     {
         private List<Extra> extra;
         
-        public Nuevo(string bastidor, string marca, string modelo, int potencia, double precioRec, List<Extra> extra) : base(bastidor, marca, modelo, potencia, precioRec)
+        public Nuevo(string bastidor, string marca, string modelo, int potencia, double precioRec, bool stock, List<Extra> extra) : base(bastidor, marca, modelo, potencia, precioRec, stock)
         {
             this.extra = extra;
         }

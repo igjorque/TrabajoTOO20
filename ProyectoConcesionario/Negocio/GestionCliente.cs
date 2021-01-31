@@ -17,10 +17,10 @@ namespace Negocio
             {
                 return true;
             }
-            else {
+            else 
+            {
                 return false;
             }
-            
         }
 
         //PRE: Recibe un cliente
@@ -38,7 +38,15 @@ namespace Negocio
         //POST: devuelve un Cliente con el dni del CLienteDTO1 introducido.
         public static Cliente consultarCliente(ClienteDTO1 c)
         {
-            return BD.ColeccionClientes[c.Dni];
+            if (existeCliente(c))
+            {
+                return BD.ColeccionClientes[c.Dni];
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         //PRE: Recibe un clienteDTO1 (tan solo conocemos su dni).

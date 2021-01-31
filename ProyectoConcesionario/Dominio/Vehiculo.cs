@@ -9,41 +9,49 @@ namespace Dominio
         private string bastidor, marca, modelo;
         private int potencia;
         private double precioRec;
+        private bool stock; // Campo para indicar si el vehículo está disponible o no.
 
-        public Vehiculo(string bastidor, string marca, string modelo, int potencia, double precioRec){
+        public Vehiculo(string bastidor, string marca, string modelo, int potencia, double precioRec, bool stock){
             this.bastidor = bastidor;
             this.marca = marca;
             this.modelo = modelo;
             this.potencia = potencia;
             this.precioRec = precioRec;
+            this.stock = stock;
         }
         public string Bastidor   
         {
-            get { return bastidor; }   
+            get { return this.bastidor; }   
         }
 
         public string Marca
         {
-            get { return marca; }
-            set { marca = value; }
+            get { return this.marca; }
+            set { this.marca = value; }
         }
 
         public string Modelo
         {
-            get { return modelo; }
-            set { modelo = value; }
+            get { return this.modelo; }
+            set { this.modelo = value; }
         }
 
         public int Potencia
         {
-            get { return potencia; }
-            set { potencia = value; }
+            get { return this.potencia; }
+            set { this.potencia = value; }
         }
 
         public double PrecioRec
         {
-            get { return precioRec; }
-            set { precioRec = value; }
+            get { return this.precioRec; }
+            set { this.precioRec = value; }
+        }
+
+        public bool Stock
+        {
+            get { return this.stock; }
+            set { this.stock = value; }
         }
 
         public bool Equals(Vehiculo vh)
