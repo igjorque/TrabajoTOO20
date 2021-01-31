@@ -305,7 +305,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsListadoOrdenado.
+        /// Abre un formulario que lista los clientes de manera ordenada dependiendo de su DNI, Nombre o importe.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -316,7 +317,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsConsultaPorDNI.
+        /// Abre un formulario donde puedes ver un cliente seleccionando su DNI.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -327,7 +329,8 @@ namespace Aplicacion
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta al evento de click en el menú tsRecorrido.
+        /// Abre un formulario donde puedes ver los clientes uno a uno.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -337,6 +340,12 @@ namespace Aplicacion
             frc.Show();
         }
 
+        /// <summary>
+        /// Método de respuesta al evento de click en el menú tsImporteCliente.
+        /// Devuelve un mensaje con el importe del cliente con el DNI introducido.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsImporteCliente_Click(object sender, EventArgs e)
         {
             FClave fc = new FClave("ID Cliente (DNI):");
