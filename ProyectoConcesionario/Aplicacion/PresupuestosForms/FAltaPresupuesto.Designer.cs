@@ -33,18 +33,20 @@
             this.tbIDCliente = new System.Windows.Forms.TextBox();
             this.tbFecha = new System.Windows.Forms.TextBox();
             this.dgLineas = new System.Windows.Forms.DataGridView();
-            this.clIDLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clIDVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clEstado = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.lbIDPresupuesto = new System.Windows.Forms.Label();
             this.lbIDCliente = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.epFecha = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epEstado = new System.Windows.Forms.ErrorProvider(this.components);
+            this.clIDLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clIDVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgLineas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epFecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epEstado)).BeginInit();
             this.SuspendLayout();
             // 
             // tbIDPresupuesto
@@ -85,32 +87,6 @@
             this.dgLineas.Size = new System.Drawing.Size(444, 260);
             this.dgLineas.TabIndex = 5;
             // 
-            // clIDLinea
-            // 
-            this.clIDLinea.HeaderText = "ID";
-            this.clIDLinea.Name = "clIDLinea";
-            // 
-            // clIDVehiculo
-            // 
-            this.clIDVehiculo.HeaderText = "Número de bastidor";
-            this.clIDVehiculo.Name = "clIDVehiculo";
-            // 
-            // clPrecio
-            // 
-            this.clPrecio.HeaderText = "Precio";
-            this.clPrecio.Name = "clPrecio";
-            // 
-            // clEstado
-            // 
-            this.clEstado.HeaderText = "Estado";
-            this.clEstado.Items.AddRange(new object[] {
-            "Aceptado",
-            "Pendiente",
-            "Desestimado"});
-            this.clEstado.Name = "clEstado";
-            this.clEstado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clEstado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // lbIDPresupuesto
             // 
             this.lbIDPresupuesto.AutoSize = true;
@@ -140,6 +116,7 @@
             // 
             // btAceptar
             // 
+            this.btAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btAceptar.Location = new System.Drawing.Point(57, 225);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
@@ -150,6 +127,7 @@
             // 
             // btCancelar
             // 
+            this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancelar.Location = new System.Drawing.Point(166, 225);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
@@ -161,6 +139,30 @@
             // epFecha
             // 
             this.epFecha.ContainerControl = this;
+            // 
+            // epEstado
+            // 
+            this.epEstado.ContainerControl = this;
+            // 
+            // clIDLinea
+            // 
+            this.clIDLinea.HeaderText = "ID";
+            this.clIDLinea.Name = "clIDLinea";
+            // 
+            // clIDVehiculo
+            // 
+            this.clIDVehiculo.HeaderText = "Número de bastidor";
+            this.clIDVehiculo.Name = "clIDVehiculo";
+            // 
+            // clPrecio
+            // 
+            this.clPrecio.HeaderText = "Precio";
+            this.clPrecio.Name = "clPrecio";
+            // 
+            // clEstado
+            // 
+            this.clEstado.HeaderText = "Estado";
+            this.clEstado.Name = "clEstado";
             // 
             // FAltaPresupuesto
             // 
@@ -180,6 +182,7 @@
             this.Text = "FAltaPresupuesto";
             ((System.ComponentModel.ISupportInitialize)(this.dgLineas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epFecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epEstado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,11 +197,12 @@
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.ErrorProvider epFecha;
+        internal System.Windows.Forms.TextBox tbIDPresupuesto;
+        private System.Windows.Forms.ErrorProvider epEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn clIDLinea;
         private System.Windows.Forms.DataGridViewTextBoxColumn clIDVehiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clPrecio;
-        private System.Windows.Forms.DataGridViewComboBoxColumn clEstado;
-        private System.Windows.Forms.ErrorProvider epFecha;
-        internal System.Windows.Forms.TextBox tbIDPresupuesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clEstado;
     }
 }

@@ -96,20 +96,25 @@ namespace Negocio
                 }
             }
             return lista;
-
         }
 
         public static double getPresupuestos(ClienteDTO1 c)
         {
-            double sum=0;
-            List<LineaPresupuesto> llp;
-            List<Presupuesto> lp = GestionPresupuesto.presupuestosCliente(c);
-            foreach(Presupuesto p in lp)
+            double sum = 0;
+            List<LineaPresupuesto> llp = null;
+            List<Presupuesto> lp = null;
+            if ((lp = GestionPresupuesto.presupuestosCliente(c)) != null) // controlo que el cliente tenga presupuestos. Si los tiene...
             {
-                llp = p.Lineas;
-                foreach(LineaPresupuesto pp in llp)
+                foreach (Presupuesto p in lp)
                 {
-                    sum =sum + pp.Precio;
+                    llp = p.Lineas;
+                    foreach (LineaPresupuesto pp in llp)
+                    {
+                        if (pp.EstadoLinea == Estado.Aceptado) // tomo únicamente los valores de las líneas que estén aceptadas, el resto están rechazadas o pendientes
+                        {
+                            sum = sum + pp.Precio;
+                        }
+                    }
                 }
             }
             return sum;

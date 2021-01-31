@@ -261,6 +261,7 @@ namespace Aplicacion
                     if (dr1 == DialogResult.OK)
                     {
                         GestionPresupuesto.altaPresupuesto(fap.Presu);
+                        MessageBox.Show("El presupuesto se ha añadido correctamente.", "Presupuesto añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -278,8 +279,16 @@ namespace Aplicacion
             DialogResult dr = fc.ShowDialog();
             if (dr == DialogResult.OK)
             {
-                FConsultarPresupuesto fcp = new FConsultarPresupuesto(GestionPresupuesto.consultarPresupuesto(new PresupuestoDTO1(fc.Clave)));
-                fcp.Show();
+                Presupuesto p = GestionPresupuesto.consultarPresupuesto(new PresupuestoDTO1(fc.Clave));
+                if(p != null)
+                {
+                    FConsultarPresupuesto fcp = new FConsultarPresupuesto(p);
+                    fcp.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El presupuesto no existe.", "Presupuesto inexistente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

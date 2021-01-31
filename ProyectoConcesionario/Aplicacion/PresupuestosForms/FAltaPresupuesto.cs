@@ -45,66 +45,85 @@ namespace Aplicacion.PresupuestosForms
         /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            List<LineaPresupuesto> llp = new List<LineaPresupuesto>();
-            LineaPresupuesto lpaux = null;
-            Estado elinea = Estado.Pendiente, epresu = Estado.Pendiente;
-            if (this.dgLineas.Rows.Count == 0) // Si no se han introducido líneas, pregunta si se desean introducir o si se cancela la operación
+            string aux;
+            DialogResult drx = DialogResult.OK;
+            int j;
+            for (int i = 0; i < this.dgLineas.Rows.Count-1; i++) // Comprobamos que el valor del estado sea correcto.
             {
-                DialogResult dr0 = MessageBox.Show("No se han introducido líneas al presupuesto. ¿Desea introducirlas? Si no, se cancelará la operación.", "Sin líneas de presupuesto", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (dr0 == DialogResult.Cancel) // Si decide cancelar la operación, cierra el formulario. En caso contrario, el método no hará nada más.
+                aux = this.dgLineas.Rows[i].Cells[3].Value.ToString().ToUpper();
+                if (aux != "A" && aux != "ACEPTADO" && aux != "P" && aux != "PENDIENTE" && aux != "D" && aux != "DESESTIMADO")
                 {
-                    this.Close();
+                    j = i + 1;
+                    MessageBox.Show("El valor del estado en la línea " + j + " no es válido. Por favor, utilice 'A', 'P', 'D', 'Aceptado', 'Pendiente' o 'Desestimado'.",
+                        "Estado introducido erróneo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    drx = DialogResult.Cancel;
                 }
             }
-            else // Si se ha introducido al menos una línea...
+            if (drx == DialogResult.OK)
             {
-                for (int i = 0; i < this.dgLineas.Rows.Count; i++)
-                { // Recorre las líneas introducidas creando los objetos de tipo LineaPresupuesto y añadiendolos a la lista de los mismos.
-                    elinea = DeterminaEstado(this.dgLineas.Rows[i].Cells["clEstado"].Value.ToString());
-                    lpaux = new LineaPresupuesto(this.dgLineas.Rows[i].Cells["clIDLinea"].Value.ToString(),
-                                                GestionVehiculo.consultarVehiculo(new VehiculoDTO1(this.dgLineas.Rows[i].Cells["clIDVehiculo"].Value.ToString())),
-                                                float.Parse(this.dgLineas.Rows[i].Cells["clPrecio"].Value.ToString()),
-                                                elinea);
-                    llp.Add(lpaux);
-                    if (elinea == Estado.Aceptado) // Si cualquiera de las líneas tiene por estado "Aceptado", entonces el estado del presupuesto será "Aceptado"
-                    {
-                        epresu = Estado.Aceptado;
-                    }
-                }
-                Cliente cl = GestionCliente.consultarCliente(new ClienteDTO1(this.tbIDCliente.Text));
-                if (cl == null) // Si el cliente no existe en la BD...
+                List<LineaPresupuesto> llp = new List<LineaPresupuesto>();
+                LineaPresupuesto lpaux = null;
+                Estado elinea = Estado.Pendiente, epresu = Estado.Pendiente;
+                if (this.dgLineas.Rows.Count == 0) // Si no se han introducido líneas, pregunta si se desean introducir o si se cancela la operación
                 {
-                    DialogResult dr = MessageBox.Show("El cliente introducido no existe. ¿Desea crearlo? Si no, se cancelará la operación.", "Cliente inexistente", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    if (dr == DialogResult.OK)
-                    { //Pregunta si desea crearlo. En caso afirmativo...
-                        FAltaCliente fac = new FAltaCliente(this.tbIDCliente.Text);
-                        DialogResult dr2 = fac.ShowDialog();
-                        if (dr2 == DialogResult.OK) // Si el formulario de creación de cliente tiene éxito, prosigue creando el presupuesto y cierra el formulario.
-                        {
-                            GestionCliente.altaCliente(fac.Client);
-                            this.presu = new Presupuesto(this.tbIDPresupuesto.Text,
-                                            cl,
-                                            StringToDate(this.tbFecha.Text),
-                                            llp,
-                                            epresu);
-                            this.Close();
-                        }
-                    }
-                    else // En caso contrario, cancela la operación y cierra el formulario.
+                    DialogResult dr0 = MessageBox.Show("No se han introducido líneas al presupuesto. ¿Desea introducirlas? Si no, se cancelará la operación.", "Sin líneas de presupuesto", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    if (dr0 == DialogResult.Cancel) // Si decide cancelar la operación, cierra el formulario. En caso contrario, el método no hará nada más.
                     {
                         this.Close();
                     }
                 }
-                else // Si todo está en orden (cliente existente, etc.) prosigue creando el presupuesto y cierra el formulario.
+                else // Si se ha introducido al menos una línea...
                 {
-                    this.presu = new Presupuesto(this.tbIDPresupuesto.Text,
-                                            cl,
-                                            StringToDate(this.tbFecha.Text),
-                                            llp,
-                                            epresu);
-                    this.Close();
+                    for (int i = 0; i < this.dgLineas.Rows.Count-1; i++)
+                    { // Recorre las líneas introducidas creando los objetos de tipo LineaPresupuesto y añadiendolos a la lista de los mismos.
+                      // 0: id linea, 1: id veh, 2: precio, 3: estado línea
+                        elinea = DeterminaEstado(this.dgLineas.Rows[i].Cells[3].Value.ToString());
+                        lpaux = new LineaPresupuesto(this.dgLineas.Rows[i].Cells[0].Value.ToString(),
+                                                    GestionVehiculo.consultarVehiculo(new VehiculoDTO1(this.dgLineas.Rows[i].Cells[1].Value.ToString())),
+                                                    float.Parse(this.dgLineas.Rows[i].Cells[2].Value.ToString()),
+                                                    elinea);
+                        llp.Add(lpaux);
+                        if (elinea == Estado.Aceptado) // Si cualquiera de las líneas tiene por estado "Aceptado", entonces el estado del presupuesto será "Aceptado"
+                        {
+                            epresu = Estado.Aceptado;
+                        }
+                    }
+                    Cliente cl = GestionCliente.consultarCliente(new ClienteDTO1(this.tbIDCliente.Text));
+                    if (cl == null) // Si el cliente no existe en la BD...
+                    {
+                        DialogResult dr = MessageBox.Show("El cliente introducido no existe. ¿Desea crearlo? Si no, se cancelará la operación.", "Cliente inexistente", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                        if (dr == DialogResult.OK)
+                        { //Pregunta si desea crearlo. En caso afirmativo...
+                            FAltaCliente fac = new FAltaCliente(this.tbIDCliente.Text);
+                            DialogResult dr2 = fac.ShowDialog();
+                            if (dr2 == DialogResult.OK) // Si el formulario de creación de cliente tiene éxito, prosigue creando el presupuesto y cierra el formulario.
+                            {
+                                GestionCliente.altaCliente(fac.Client);
+                                this.presu = new Presupuesto(this.tbIDPresupuesto.Text,
+                                                cl,
+                                                StringToDate(this.tbFecha.Text),
+                                                llp,
+                                                epresu);
+                                this.Close();
+                            }
+                        }
+                        else // En caso contrario, cancela la operación y cierra el formulario.
+                        {
+                            this.Close();
+                        }
+                    }
+                    else // Si todo está en orden (cliente existente, etc.) prosigue creando el presupuesto y cierra el formulario.
+                    {
+                        this.presu = new Presupuesto(this.tbIDPresupuesto.Text,
+                                                cl,
+                                                StringToDate(this.tbFecha.Text),
+                                                llp,
+                                                epresu);
+                        this.Close();
+                    }
                 }
             }
+            
         }
 
         /// <summary>
@@ -114,13 +133,14 @@ namespace Aplicacion.PresupuestosForms
         /// </summary>
         /// <param name="estado"></param>
         /// <returns></returns>
-        private Estado DeterminaEstado(string estado)
+        private Estado DeterminaEstado(string est)
         {
-            if (estado == "Aceptado")
+            string estado = est.ToUpper();
+            if (estado == "ACEPTADO" || estado == "A")
             {
                 return Estado.Aceptado;
             }
-            else if (estado == "Pendiente")
+            else if (estado == "PENDIENTE" || estado == "P")
             {
                 return Estado.Pendiente;
             }

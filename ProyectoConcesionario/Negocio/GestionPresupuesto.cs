@@ -54,16 +54,23 @@ namespace Negocio
 
         public static List<Presupuesto> presupuestosCliente(ClienteDTO1 c)
         {
-            List<Presupuesto> lista = new List<Presupuesto>();
-            foreach (Presupuesto p in BD.ColeccionPresupuestos)
+            List<Presupuesto> lista = null;
+            Cliente cli = null;
+            if (GestionCliente.existeCliente(c))
             {
-                if(p.Client.Dni == c.Dni)
+                cli = GestionCliente.consultarCliente(c);
+                lista = new List<Presupuesto>();
+                foreach (Presupuesto p in BD.ColeccionPresupuestos)
                 {
-                    lista.Add(p);
+                    if (p.Client.Equals(cli))
+                    {
+                        lista.Add(p);
+                    }
                 }
             }
             return lista;
         }
+
         /*
         public static List<Presupuesto> presupuestosComercial(ComercialDTO1 c)
         {
