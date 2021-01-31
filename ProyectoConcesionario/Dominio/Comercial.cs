@@ -8,7 +8,7 @@ namespace Dominio
     {
         private string idComercial;
 
-        public Comercial(string dni, string nombre, string telefono, string idComercial) : base(dni, nombre, telefono)
+        public Comercial(string dni, string nombre, string telefono, string apellido, string idComercial) : base(dni, nombre, telefono, apellido)
         {
             this.idComercial = idComercial;
         }

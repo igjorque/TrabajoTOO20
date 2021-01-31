@@ -6,13 +6,18 @@ namespace Dominio
 {
     public abstract class Persona : IEquatable<Persona>
     {
-        private string dni, nombre, telefono;
+        private string dni, nombre, telefono, apellido;
 
-        public Persona(string dni, string nombre, string telefono)
+        public Persona(string dni, string nombre, string telefono, string apellido)
         {
             this.dni = dni;
             this.nombre = nombre;
             this.telefono = telefono;
+            this.apellido = apellido;
+        }
+        public string Apellido
+        {
+            get { return this.apellido; }
         }
         public string Dni
         {
