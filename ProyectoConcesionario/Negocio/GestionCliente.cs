@@ -98,5 +98,21 @@ namespace Negocio
             return lista;
 
         }
+
+        public static double getPresupuestos(ClienteDTO1 c)
+        {
+            double sum=0;
+            List<LineaPresupuesto> llp;
+            List<Presupuesto> lp = GestionPresupuesto.presupuestosCliente(c);
+            foreach(Presupuesto p in lp)
+            {
+                llp = p.Lineas;
+                foreach(LineaPresupuesto pp in llp)
+                {
+                    sum =sum + pp.Precio;
+                }
+            }
+            return sum;
+        }
     }
 }
