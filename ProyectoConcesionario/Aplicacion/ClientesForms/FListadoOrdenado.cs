@@ -56,6 +56,11 @@ namespace Aplicacion.ClientesForms
             this.Close();
         }
 
+        public static int ComparaPresupuestos(Cliente c1, Cliente c2)
+        {
+            return GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c1.Dni)).CompareTo( GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c2.Dni)));
+        }
+
         private void btnImporte_Click(object sender, EventArgs e)
         {
 
@@ -64,7 +69,7 @@ namespace Aplicacion.ClientesForms
                 this.listBox2.Items.Clear();
                 this.listBox3.Items.Clear();
                 List<Cliente> lord = GestionCliente.listarClientes();
-                lord.Sort(Cliente.ComparaNombre);
+                lord.Sort(ComparaPresupuestos);
                 foreach (Cliente c in lord)
                 {
                     listBox1.Items.Add(c.Dni);
