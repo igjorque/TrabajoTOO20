@@ -36,7 +36,12 @@ namespace Aplicacion.ClientesForms
             }
             
         }
-
+        /// <summary>
+        /// Método de respuesta al evento de cambio de Objeto.
+        /// Coloca los datos de el Cliente "actual" en los textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
             Cliente c = (Cliente)bindingSource1.Current;

@@ -28,6 +28,12 @@ namespace Aplicacion.ClientesForms
                 return this.client;
             }
         }
+        /// <summary>
+        /// Método de respuesta al evento de click en el botón btAcpetar.
+        /// Crea un cliente con los datos introducidos en los textBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CrearCliente(object sender, EventArgs e)
         {
             bool valido = false;
@@ -48,7 +54,12 @@ namespace Aplicacion.ClientesForms
             }
             
         }
-
+        /// <summary>
+        /// Método de respuesta al evento de click en el botón btCancelar.
+        /// Cierra el formulario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void CancelarOperacion(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

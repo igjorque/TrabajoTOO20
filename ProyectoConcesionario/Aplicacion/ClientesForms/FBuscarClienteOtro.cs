@@ -14,6 +14,11 @@ namespace Aplicacion.ClientesForms
 {
     public partial class FBuscarClienteOtro : Form
     {
+        /// <summary>
+        /// Coloca todos los DNIs conocidos en el comboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public FBuscarClienteOtro()
         {
             InitializeComponent();
@@ -22,7 +27,11 @@ namespace Aplicacion.ClientesForms
                 this.comboBox1.Items.Add(c.Dni);
             }
         }
-
+        /// <summary>
+        /// Coloca todos los datos del cliente con el DNI elegido en el comboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             Cliente c = GestionCliente.consultarCliente(new Implementacion.ClienteDTO1(comboBox1.SelectedItem.ToString()));

@@ -91,6 +91,7 @@ namespace Aplicacion.ClientesForms
             // 
             this.tbApellidos.Location = new System.Drawing.Point(96, 137);
             this.tbApellidos.Name = "tbApellidos";
+            this.tbApellidos.ReadOnly = true;
             this.tbApellidos.Size = new System.Drawing.Size(137, 22);
             this.tbApellidos.TabIndex = 5;
             // 
@@ -98,6 +99,7 @@ namespace Aplicacion.ClientesForms
             // 
             this.tbNombre.Location = new System.Drawing.Point(96, 44);
             this.tbNombre.Name = "tbNombre";
+            this.tbNombre.ReadOnly = true;
             this.tbNombre.Size = new System.Drawing.Size(137, 22);
             this.tbNombre.TabIndex = 6;
             // 

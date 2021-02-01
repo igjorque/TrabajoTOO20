@@ -36,7 +36,12 @@ namespace Aplicacion.ClientesForms
                 gridClientes.Rows[n].Cells[3].Value = c.Categoria;
             }
         }
-
+        /// <summary>
+        /// Muestra tan solo los clientes con Categoría A.
+        /// Ocurre al hacer clic en rbCatA.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbCatA_Click(object sender, EventArgs e)
         {
             gridClientes.Rows.Clear();
@@ -51,7 +56,12 @@ namespace Aplicacion.ClientesForms
                 gridClientes.Rows[n].Cells[3].Value = c.Categoria;
             }
         }
-
+        /// <summary>
+        /// Muestra tan solo los clientes con Categoría B.
+        /// Ocurre al hacer clic en rbCatB.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbCatB_Click(object sender, EventArgs e)
         {
             gridClientes.Rows.Clear();
@@ -66,7 +76,12 @@ namespace Aplicacion.ClientesForms
                 gridClientes.Rows[n].Cells[3].Value = c.Categoria;
             }
         }
-
+        /// <summary>
+        /// Muestra tan solo los clientes con Categoría C.
+        /// Ocurre al hacer clic en rbCatC.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbCatC_Click(object sender, EventArgs e)
         {
             gridClientes.Rows.Clear();

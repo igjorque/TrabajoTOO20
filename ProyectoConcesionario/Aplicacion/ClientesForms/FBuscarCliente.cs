@@ -13,6 +13,11 @@ namespace Aplicacion.ClientesForms
 {
     public partial class FBuscarCliente : Form
     {
+        /// <summary>
+        /// Método que coloca los datos del cliente deseado en los respectivos textBox, que serán solo de lectura.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public FBuscarCliente(Cliente cliente)
         {
             InitializeComponent();

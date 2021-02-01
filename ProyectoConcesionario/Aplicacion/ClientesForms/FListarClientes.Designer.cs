@@ -49,9 +49,9 @@
             this.gbCategoria.Controls.Add(this.rbCatA);
             this.gbCategoria.Controls.Add(this.rbCatTodas);
             this.gbCategoria.Location = new System.Drawing.Point(572, 33);
-            this.gbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.gbCategoria.Name = "gbCategoria";
-            this.gbCategoria.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCategoria.Padding = new System.Windows.Forms.Padding(4);
             this.gbCategoria.Size = new System.Drawing.Size(247, 58);
             this.gbCategoria.TabIndex = 0;
             this.gbCategoria.TabStop = false;
@@ -61,7 +61,7 @@
             // 
             this.rbCatC.AutoSize = true;
             this.rbCatC.Location = new System.Drawing.Point(191, 25);
-            this.rbCatC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatC.Margin = new System.Windows.Forms.Padding(4);
             this.rbCatC.Name = "rbCatC";
             this.rbCatC.Size = new System.Drawing.Size(38, 21);
             this.rbCatC.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             this.rbCatB.AutoSize = true;
             this.rbCatB.Location = new System.Drawing.Point(140, 25);
-            this.rbCatB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatB.Margin = new System.Windows.Forms.Padding(4);
             this.rbCatB.Name = "rbCatB";
             this.rbCatB.Size = new System.Drawing.Size(38, 21);
             this.rbCatB.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.rbCatA.AutoSize = true;
             this.rbCatA.Location = new System.Drawing.Point(89, 23);
-            this.rbCatA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatA.Margin = new System.Windows.Forms.Padding(4);
             this.rbCatA.Name = "rbCatA";
             this.rbCatA.Size = new System.Drawing.Size(38, 21);
             this.rbCatA.TabIndex = 1;
@@ -100,7 +100,7 @@
             // 
             this.rbCatTodas.AutoSize = true;
             this.rbCatTodas.Location = new System.Drawing.Point(8, 25);
-            this.rbCatTodas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCatTodas.Margin = new System.Windows.Forms.Padding(4);
             this.rbCatTodas.Name = "rbCatTodas";
             this.rbCatTodas.Size = new System.Drawing.Size(69, 21);
             this.rbCatTodas.TabIndex = 0;
@@ -117,8 +117,9 @@
             this.Telefono,
             this.Categoria});
             this.gridClientes.Location = new System.Drawing.Point(73, 342);
-            this.gridClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridClientes.Margin = new System.Windows.Forms.Padding(4);
             this.gridClientes.Name = "gridClientes";
+            this.gridClientes.ReadOnly = true;
             this.gridClientes.RowHeadersWidth = 51;
             this.gridClientes.Size = new System.Drawing.Size(681, 185);
             this.gridClientes.TabIndex = 1;
@@ -128,6 +129,7 @@
             this.DNI.HeaderText = "DNI";
             this.DNI.MinimumWidth = 6;
             this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
             this.DNI.Width = 125;
             // 
             // Nombre
@@ -135,6 +137,7 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 125;
             // 
             // Telefono
@@ -142,6 +145,7 @@
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.MinimumWidth = 6;
             this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             this.Telefono.Width = 125;
             // 
             // Categoria
@@ -149,6 +153,7 @@
             this.Categoria.HeaderText = "Categoría";
             this.Categoria.MinimumWidth = 6;
             this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
             this.Categoria.Width = 125;
             // 
             // FListarClientes
@@ -158,7 +163,7 @@
             this.ClientSize = new System.Drawing.Size(1293, 561);
             this.Controls.Add(this.gridClientes);
             this.Controls.Add(this.gbCategoria);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FListarClientes";
             this.Text = "FListarClientes";
             this.gbCategoria.ResumeLayout(false);

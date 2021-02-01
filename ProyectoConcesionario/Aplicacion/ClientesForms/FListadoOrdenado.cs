@@ -19,6 +19,11 @@ namespace Aplicacion.ClientesForms
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Ordena los datos por DNIs de menor a mayor.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDNI_Click(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
@@ -34,7 +39,11 @@ namespace Aplicacion.ClientesForms
                 listBox3.Items.Add(GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)));
             }
         }
-
+        /// <summary>
+        /// Ordena los datos por Nombre de menor a mayor.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNombre_Click(object sender, EventArgs e)
         {
 
@@ -55,12 +64,20 @@ namespace Aplicacion.ClientesForms
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Compara los presupuestos de dos clientes y devuelve un entero.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static int ComparaPresupuestos(Cliente c1, Cliente c2)
         {
             return GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c1.Dni)).CompareTo( GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c2.Dni)));
         }
-
+        /// <summary>
+        /// Ordena los datos por Importe de menor a mayor.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImporte_Click(object sender, EventArgs e)
         {
 

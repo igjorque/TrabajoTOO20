@@ -14,6 +14,11 @@ namespace Aplicacion.ClientesForms
     public partial class FBajaCliente : Form
     {
         private Cliente client;
+        /// <summary>
+        /// Elimina un cliente con el DNI introducido en el textBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public FBajaCliente(Cliente cliente)
         {
             InitializeComponent();
