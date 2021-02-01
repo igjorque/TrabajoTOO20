@@ -14,6 +14,11 @@ namespace Aplicacion.PresupuestosForms
     public partial class FConsultarPresupuesto : Form
     {
         private Presupuesto presu;
+
+        /// <summary>
+        /// Constructor del formulario. Muestra los datos del presupuesto recibido como parámetro.
+        /// </summary>
+        /// <param name="p"></param>
         public FConsultarPresupuesto(Presupuesto p)
         {
             InitializeComponent();
@@ -21,9 +26,17 @@ namespace Aplicacion.PresupuestosForms
             this.tbIDPresupuesto.Text = this.presu.Id;
             this.tbIDCliente.Text = this.presu.Client.Dni;
             this.tbFecha.Text = this.presu.Fecha.ToString("yyyy/MM/dd");
-            this.dgLineas.DataSource = new BindingSource(new BindingList<LineaPresupuesto>(this.presu.Lineas), null);
+            foreach (LineaPresupuesto lp in this.presu.Lineas)
+            {
+                this.dgLineas.Rows.Add(lp.IdLinea, lp.VehiculoPr.Bastidor, lp.Precio, lp.EstadoLinea);
+            }
         }
 
+        /// <summary>
+        /// Al hacer click en el botón aceptar, se cerrará el formulario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             this.Close();

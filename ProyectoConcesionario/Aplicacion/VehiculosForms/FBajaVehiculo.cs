@@ -16,6 +16,10 @@ namespace Aplicacion.VehiculosForms
     {
         private Vehiculo vehiculo;
 
+        /// <summary>
+        /// Constructor del formulario. Recibe el vehículo para mostrar todos sus datos antes de hacer la baja lógica del mismo.
+        /// </summary>
+        /// <param name="veh"></param>
         public FBajaVehiculo(Vehiculo veh)
         {
             InitializeComponent();

@@ -36,6 +36,10 @@
             this.tbFecha = new System.Windows.Forms.TextBox();
             this.tbIDCliente = new System.Windows.Forms.TextBox();
             this.tbIDPresupuesto = new System.Windows.Forms.TextBox();
+            this.clIdLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clIdVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgLineas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,6 +85,11 @@
             this.dgLineas.AllowUserToAddRows = false;
             this.dgLineas.AllowUserToDeleteRows = false;
             this.dgLineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clIdLinea,
+            this.clIdVehiculo,
+            this.clPrecio,
+            this.clEstado});
             this.dgLineas.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgLineas.Location = new System.Drawing.Point(246, 0);
             this.dgLineas.Name = "dgLineas";
@@ -112,6 +121,30 @@
             this.tbIDPresupuesto.Size = new System.Drawing.Size(119, 20);
             this.tbIDPresupuesto.TabIndex = 12;
             // 
+            // clIdLinea
+            // 
+            this.clIdLinea.HeaderText = "ID Línea";
+            this.clIdLinea.Name = "clIdLinea";
+            this.clIdLinea.ReadOnly = true;
+            // 
+            // clIdVehiculo
+            // 
+            this.clIdVehiculo.HeaderText = "Núm. Bastidor";
+            this.clIdVehiculo.Name = "clIdVehiculo";
+            this.clIdVehiculo.ReadOnly = true;
+            // 
+            // clPrecio
+            // 
+            this.clPrecio.HeaderText = "Precio";
+            this.clPrecio.Name = "clPrecio";
+            this.clPrecio.ReadOnly = true;
+            // 
+            // clEstado
+            // 
+            this.clEstado.HeaderText = "Estado";
+            this.clEstado.Name = "clEstado";
+            this.clEstado.ReadOnly = true;
+            // 
             // FConsultarPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,5 +175,9 @@
         private System.Windows.Forms.TextBox tbFecha;
         private System.Windows.Forms.TextBox tbIDCliente;
         private System.Windows.Forms.TextBox tbIDPresupuesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clIdLinea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clIdVehiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clEstado;
     }
 }

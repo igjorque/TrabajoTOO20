@@ -14,6 +14,11 @@ namespace Aplicacion.PresupuestosForms
     public partial class FListarPresupuestos : Form
     {
         private List<Presupuesto> lp;
+
+        /// <summary>
+        /// Constructor del formulario. Muestra el listado de presupuestos recibido como parámetro.
+        /// </summary>
+        /// <param name="lp"></param>
         public FListarPresupuestos(List<Presupuesto> lp)
         {
             InitializeComponent();

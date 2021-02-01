@@ -14,6 +14,10 @@ namespace Aplicacion.VehiculosForms
 {
     public partial class FConsultarVehiculo : Form
     {
+        /// <summary>
+        /// Constructor del formulario. Recibe un objeto de tipo Vehículo para mostrar todos sus datos.
+        /// </summary>
+        /// <param name="v"></param>
         public FConsultarVehiculo(Vehiculo v)
         {
             InitializeComponent();
@@ -57,6 +61,11 @@ namespace Aplicacion.VehiculosForms
                 ucu.tbFechaMatriculacion.Text = u.FechaMatricula.ToString();
             }
         }
+
+        /// <summary>
+        /// Método auxiliar para establecer los datos del vehículo en los textbox correspondientes.
+        /// </summary>
+        /// <param name="v"></param>
         private void DatosVehiculo(Vehiculo v)
         {
             this.ucDatos.tbBastidor.Text = v.Bastidor;

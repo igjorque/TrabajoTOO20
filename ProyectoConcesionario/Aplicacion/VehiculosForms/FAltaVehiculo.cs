@@ -40,7 +40,8 @@ namespace Aplicacion.VehiculosForms
         }
 
         /// <summary>
-        /// 
+        /// Método de respuesta para el evento de cambio de selección de los radio buttons.
+        /// Intercambia el usercontrol que se esté mostrando según cuál se seleccione.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -76,7 +77,7 @@ namespace Aplicacion.VehiculosForms
         }
 
         /// <summary>
-        /// 
+        /// Método para la creación del objeto de tipo Vehículo con los datos introducidos al hacer click en el botón Aceptar.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

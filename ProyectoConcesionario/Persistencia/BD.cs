@@ -8,9 +8,11 @@ namespace Persistencia
         private static CollectionClientes coleccionClientes;
         private static CollectionVehiculos coleccionVehiculos;
         private static CollectionPresupuestos coleccionPresupuestos;
-        private static CollectionLineasPresupuesto coleccionLineasPresupuesto;
         private BD() { }
 
+        /// <summary>
+        /// Devuelve la colección de clientes existente, o una nueva en caso de no existir.
+        /// </summary>
         public static CollectionClientes ColeccionClientes
         {
             get
@@ -23,6 +25,9 @@ namespace Persistencia
             }
         }
 
+        /// <summary>
+        /// Devuelve la colección de vehículos existente, o una nueva en caso de no existir.
+        /// </summary>
         public static CollectionVehiculos ColeccionVehiculos
         {
             get
@@ -34,6 +39,10 @@ namespace Persistencia
                 return coleccionVehiculos;
             }
         }
+
+        /// <summary>
+        /// Devuelve la colección de presupuestos existente, o una nueva en caso de no existir.
+        /// </summary>
         public static CollectionPresupuestos ColeccionPresupuestos
         {
             get
@@ -43,18 +52,6 @@ namespace Persistencia
                     coleccionPresupuestos = new CollectionPresupuestos();
                 }
                 return coleccionPresupuestos;
-            }
-        }
-
-        public static CollectionLineasPresupuesto ColeccionLineasPresupuesto
-        {
-            get
-            {
-                if (coleccionLineasPresupuesto == null)
-                {
-                    coleccionLineasPresupuesto = new CollectionLineasPresupuesto();
-                }
-                return coleccionLineasPresupuesto;
             }
         }
     }

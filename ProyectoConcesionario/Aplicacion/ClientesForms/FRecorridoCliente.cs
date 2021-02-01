@@ -15,18 +15,19 @@ namespace Aplicacion.ClientesForms
 {
     public partial class FRecorridoCliente : Form
     {
-        public FRecorridoCliente()
+        private List<Cliente> lc;
+        public FRecorridoCliente(List<Cliente> lc)
         {
             InitializeComponent();
-            List<Cliente> list = GestionCliente.listarClientes();
-            if (list.Count != 0)
+            this.lc = lc;
+            if (lc.Count != 0)
             {
-                this.bindingSource1.DataSource = list;
+                this.bindingSource1.DataSource = lc;
                 this.bindingNavigator1.BindingSource = bindingSource1;
-                Cliente c = (Cliente)bindingSource1.Current;
+                Cliente c = (Cliente) bindingSource1.Current;
                 tbDNI.Text = c.Dni;
                 tbApellidos.Text = c.Apellido;
-                tbImporte.Text = GestionCliente.getPresupuestos(new Implementacion.ClienteDTO1(c.Dni)).ToString();
+                tbImporte.Text = GestionCliente.getPresupuestos(new ClienteDTO1(c.Dni)).ToString();
                 tbNombre.Text = c.Nombre;
             }
             else

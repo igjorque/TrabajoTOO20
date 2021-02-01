@@ -15,6 +15,10 @@ namespace Aplicacion.VehiculosForms
     {
         private BindingList<Vehiculo> blv;
 
+        /// <summary>
+        /// Constructor del formulario. Muestra un listado con todos los vehículos almacenados (recibidos mediante la lista).
+        /// </summary>
+        /// <param name="lv"></param>
         public FListarVehiculos(List<Vehiculo> lv)
         {
             InitializeComponent();

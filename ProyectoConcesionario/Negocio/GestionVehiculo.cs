@@ -10,9 +10,9 @@ namespace Negocio
     public static class GestionVehiculo
     {
         /// <summary>
-        /// 
+        /// Alta de un nuevo vehículo en la BD.
         /// </summary>
-        /// <param name="v"></param>
+        /// <param name="v">Objeto vehículo a almacenar.</param>
         public static void altaVehiculo(Vehiculo v)
         {
             BD.ColeccionVehiculos.Add(v);
@@ -21,7 +21,7 @@ namespace Negocio
         /// <summary>
         /// Baja lógica de un vehículo. Establece stock como false (no disponible).
         /// </summary>
-        /// <param name="v">Vehículo a modificar</param>
+        /// <param name="v">Vehículo a modificar.</param>
         /// <returns>TRUE si se ha modificado, FALSE en caso contrario.</returns>
         public static bool bajaVehiculo(VehiculoDTO1 v)
         {
@@ -40,10 +40,10 @@ namespace Negocio
         }
 
         /// <summary>
-        /// 
+        /// Obtiene los datos de un vehículo a partir de su clave.
         /// </summary>
-        /// <param name="v"></param>
-        /// <returns></returns>
+        /// <param name="v">Clave del vehículo.</param>
+        /// <returns>Objeto Vehículo en caso de existir, NULL en caso contrario.</returns>
         public static Vehiculo consultarVehiculo(VehiculoDTO1 v)
         {
             if (BD.ColeccionVehiculos.Contains(v.Bastidor))
@@ -58,19 +58,19 @@ namespace Negocio
         }
 
         /// <summary>
-        /// 
+        /// Comprueba si existe un vehículo a partir de su clave.
         /// </summary>
-        /// <param name="v"></param>
-        /// <returns></returns>
+        /// <param name="v">Clave del vehículo.</param>
+        /// <returns>TRUE si existe, FALSE en caso contrario.</returns>
         public static bool existeVehiculo(VehiculoDTO1 v)
         {
             return BD.ColeccionVehiculos.Contains(v.Bastidor);
         }
 
         /// <summary>
-        /// 
+        /// Obtiene una lista de todos los vehículos almacenados que puede ser vacía.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de todos los vehículos almacenados. Puede ser una lista vacía.</returns>
         public static List<Vehiculo> listarVehiculos()
         {
             List<Vehiculo> lista = new List<Vehiculo>();
@@ -82,9 +82,9 @@ namespace Negocio
         }
 
         /// <summary>
-        /// 
+        /// Obtiene una lista de todos los vehículos de tipo Usado, que puede ser vacía.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de todos los vehículos Usados. Puede ser una lista vacía.</returns>
         public static List<Vehiculo> listarUsados()
         {
             List<Vehiculo> lista = new List<Vehiculo>();
@@ -96,9 +96,9 @@ namespace Negocio
         }
 
         /// <summary>
-        /// 
+        /// Obtiene una lista de todos los vehículos de tipo Nuevo, que puede ser vacía.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de todos los vehículos Nuevos. Puede ser una lista vacía.</returns>
         public static List<Vehiculo> listarNuevos()
         {
             List<Vehiculo> lista = new List<Vehiculo>();

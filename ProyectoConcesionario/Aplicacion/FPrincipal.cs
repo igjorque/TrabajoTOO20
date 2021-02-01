@@ -336,8 +336,17 @@ namespace Aplicacion
         /// <param name="e"></param>
         private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRecorridoCliente frc = new FRecorridoCliente();
-            frc.Show();
+            List<Cliente> lcaux = GestionCliente.listarClientes();
+            if (lcaux.Count == 0)
+            {
+                MessageBox.Show("No hay clientes almacenados.", "Sin clientes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FRecorridoCliente frc = new FRecorridoCliente(lcaux);
+                frc.Show();
+            }
+            
         }
 
         /// <summary>
